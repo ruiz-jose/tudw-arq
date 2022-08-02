@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Clase 01
 
 You can use the [editor on GitHub](https://github.com/ruiz-jose/tudw-arq/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
