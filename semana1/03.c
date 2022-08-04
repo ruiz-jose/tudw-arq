@@ -23,7 +23,9 @@ int main()
   float a = 12335545621232154;
   printf ("valor de (a) antes de a = a + 1; = %f \n",a);
   a = a + 1;
-  printf ("valor de (a) depues de a = a + 1; = %f \n", a);
+  printf ("valor de (a) despues de a = a + 1; = %f \n", a);
+ 
+ // otros ejemplos http://geocar.sdf1.org/numbers.html
 
   return 0;
 }
