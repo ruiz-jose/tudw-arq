@@ -1,6 +1,6 @@
-## Clase 01
+## Semana 1: ¿Porque estudiar arquitectura?
 
-You can use the [editor on GitHub](https://github.com/ruiz-jose/tudw-arq/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+1. Realidad #1: Aritmetica en la computadora
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
