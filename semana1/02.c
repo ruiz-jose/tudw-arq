@@ -11,12 +11,11 @@
 
 int main()
 {
-    int i, x;
-    for (i = 1; i <= 5; i++)
-    {
-        x = i*10000;
-        printf("x = %d * %d = %d\n", x, x, x*x);
-    
-    }
+    int x;
+    //x*x >= 0 ?
+    x=40000;
+    printf ("valor de x = 40000 * 40000=: %i \n", x*x);
+    x=50000;
+    printf ("valor de x = 50000 * 50000=: %i \n", x*x);
     return 0;
 }
