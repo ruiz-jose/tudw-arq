@@ -1,5 +1,7 @@
 # Semana 1: ¿Porque estudiar arquitectura?
 
+```markdown
+
 ### - 1. Realidad #1: Aritmetica en la computadora
 
 Los numeros en la computadora son finitos que representan abstraciones de la realidad, es necesario conocer sus limites y sus propiedades. 
