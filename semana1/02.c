@@ -1,6 +1,6 @@
 /******************************************************************************
  ejemplo 02: overflow int signed: muestra overflow en un entero signado,  
- al multiplicar la variable x * x producce un desbordamiento.
+ al multiplicar la variable x * x producen un desbordamiento.
  En C los enteros signado (signed int)
  ocupan 4 bytes y tienen un rango de {-2.147.483.648 ; 2.147.483.647}
 *******************************************************************************/
