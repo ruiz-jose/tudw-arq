@@ -25,7 +25,10 @@ int main()
   a = a + 1;
   printf ("valor de (a) despues de a = a + 1; = %f \n", a);
  
- // otros ejemplos http://geocar.sdf1.org/numbers.html
+ /* otros ejemplos:
+  - http://geocar.sdf1.org/numbers.html
+  - https://float.exposed/0x3fc00000
+  */ 
 
   return 0;
 }
