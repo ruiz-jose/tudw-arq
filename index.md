@@ -1,6 +1,13 @@
-## Semana 1: ¿Porque estudiar arquitectura?
+# Semana 1: ¿Porque estudiar arquitectura?
 
-1. Realidad #1: Aritmetica en la computadora
+### - 1. Realidad #1: Aritmetica en la computadora
+
+Los numeros en la computadora son finitos que representan abstraciones de la realidad, es necesario conocer sus limites y sus propiedades. 
+
+### - 2. Realidad #2: Conocer ensamblador
+
+Es necesario conocer ensamblador para conocer que codigo es mas eficiente
+
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
