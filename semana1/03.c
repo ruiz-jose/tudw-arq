@@ -15,7 +15,9 @@ int main()
    "mEn" significa m × 10n
    x y z son numeros grandes y al sumarles un numero z
    no impacta en el resultado -1e20 + 3.14 = -1e20*/
-
+   
+   /* No se cumple la propiedad asociativa matematica
+   (x+y)+z) distinto que x+(y+z))          */
   printf ("valor de (x+y)+z= %f \n", (x+y)+z);
   printf ("valor de x+(y+z)= %f \n", x+(y+z));
 
