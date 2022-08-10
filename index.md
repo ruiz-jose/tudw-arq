@@ -4,8 +4,7 @@
 
 ### - 1. Realidad #1: Aritmetica en la computadora
 ```markdown
-Los numeros en la computadora son finitos que representan abstraciones de la realidad,
-es necesario conocer sus limites y sus propiedades. 
+En la computadora los numeros se representan mediante atracciones y de manera finita, por lo tanto es necesario conocer sus limites y sus propiedades. 
 ```
 ### - 2. Realidad #2: Conocer ensamblador
 ```markdown
