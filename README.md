@@ -1,3 +1,10 @@
+<div align="center">
+	<br>
+	<a href="https://github.com/ruiz-jose/tudw-arq/header.svg">
+		<img src="header.svg" width="800" height="400" alt="TUDW-ARQ">
+	</a>
+	<br>
+</div>
 # TUDW-ARQ
 Clases de arquitectura de computadoras - Tecnicatura Universitaria en Desarrollo Web - 2022
 
