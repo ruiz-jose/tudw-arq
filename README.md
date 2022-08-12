@@ -5,8 +5,8 @@
 	</a>
 	<br>
 </div>
-# TUDW-ARQ
-Clases de arquitectura de computadoras - Tecnicatura Universitaria en Desarrollo Web - 2022
+
+# Clases de arquitectura de computadoras - Tecnicatura Universitaria en Desarrollo Web - 2022
 
 # Semana 1: ¿Por qué estudiar arquitectura?
 
