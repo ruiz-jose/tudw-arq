@@ -21,3 +21,4 @@ Puedes descargar la maquina virtual de la asignatura "tudw-arq-clave=2022.ova" [
   La memoria es finita y conocer sus como funciona permite mejorar el código.
 
 
+# Semana 2: Medidas de rendimiento
