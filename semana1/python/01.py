@@ -9,7 +9,8 @@
     https://www.online-python.com/
 '''
 
-# 250 elevado 250 
-x = 250**250
-print(x)
-print(type(x))
+# 10 elevado 600
+centillion = 10 ** 600
+
+print(centillion)
+print(type(centillion))
