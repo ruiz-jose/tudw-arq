@@ -17,17 +17,20 @@ max_val = sys.maxsize
 
 try:
 
+	# agregar un elemento 
+	#list = range(max_val)
 
+	# agregar otro elemento 
 	max_val = max_val + 1
 	list = range(max_val)
 	
 	# Mostrar el tamaño de list
 	print(len(list))
 	
-	print("max_val = max_val + 1 Exitoso")
+	print("Exitoso se agrego un elemento")
 	
 except Exception as e:
 
 	# displaying the exception
 	print(e)
-	print("max_val = max_val + 1 NO Exitoso")
+	print("NO Exitoso")
