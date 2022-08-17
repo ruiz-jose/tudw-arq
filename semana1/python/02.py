@@ -1,5 +1,5 @@
 '''
-    Ejemplo 02.py muestra error al superar el rango de los valores enteros
+    Ejemplo 02.py muestra error al superar el rango de los valores de una lista
     probado para una arquitectura de 64 bits con python 3
     valor entero máximo en Python 3 Max Int
     - valor maximo entero 2**63 -1 = 9223372036854775807
@@ -8,7 +8,7 @@
     
     error: python int too large to convert to C ssize_t
 
-	El valor sys.maxsize informa el tamaño del puntero de las estructuras de datos de Python, como listas.
+	El valor sys.maxsize informa el tamaño maximo de una estructura de datos en Python.
  '''
 
 import sys
