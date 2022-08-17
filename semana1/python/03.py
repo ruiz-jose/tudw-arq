@@ -1,5 +1,5 @@
 '''
-    Ejemplo 03.py son reales (float) en formato de dato en punto flotante
+    Ejemplo 03.py: son reales (float) en formato de dato en punto flotante
     
     
  '''
