@@ -7,6 +7,8 @@
     - tipo de datos <class 'int'> 
     
     error: python int too large to convert to C ssize_t
+
+	El valor sys.maxsize informa el tamaño del puntero de las estructuras de datos de Python, como listas.
  '''
 
 import sys
