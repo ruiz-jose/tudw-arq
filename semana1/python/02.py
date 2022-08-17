@@ -17,20 +17,20 @@ max_val = sys.maxsize
 
 try:
 
-	# agregar un elemento 
+	# Se define una lista con un rango max_val elementos 
 	#list = range(max_val)
 
-	# agregar otro elemento 
+	# se incrementa en uno max_val y se genera nueva lista 
 	max_val = max_val + 1
 	list = range(max_val)
 	
-	# Mostrar el tamaño de list
+	# Arroja error al intentar acceder a la lista porque tiene un rango superior
 	print(len(list))
 	
-	print("Exitoso se agrego un elemento")
+	print("Exitoso tamaño de lista correcta")
 	
 except Exception as e:
 
-	# displaying the exception
+	# Se atraba el error
 	print(e)
-	print("NO Exitoso")
+	print("NO Exitoso supero tamaño de la lista")
