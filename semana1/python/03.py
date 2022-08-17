@@ -3,7 +3,9 @@
     Errores de aproximación en reales (float) o punto flotante
     Debido a que la representación interna de los valores en coma flotante
     sigue el estándar IEEE 754 y estamos trabajando con aritmética finita.
-    
+
+    A diferencia de los enteros, los números flotantes sí que tienen un límite en Python. 
+      
  '''
 
 # ejemplo 03.c en python 
@@ -27,3 +29,9 @@ print(x)
 
 # Debería dar 1.0  http://geocar.sdf1.org/numbers.html
 print(9999999999999999.0 - 9999999999999998.0)
+
+# importar libreria de python sys 
+import sys
+
+print(sys.float_info.min)
+print(sys.float_info.max)
