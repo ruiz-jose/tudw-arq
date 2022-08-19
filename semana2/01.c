@@ -18,7 +18,7 @@ int main()
 
 	time_t end = time(NULL);
 
-	// calcular el tiempo de ejecucion deñ programa: diferenca entre (end - begin)
+	// calcular el tiempo de ejecucion del programa: diferenca entre (end - begin)
 	printf("El tiempo de ejecución es %ld segundos", (end - begin));
 
 	return 0;
