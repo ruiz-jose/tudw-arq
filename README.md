@@ -29,7 +29,6 @@ Puedes descargar la maquina virtual de la asignatura "tudw-arq-clave=2022.ova" [
 
 ### - 3. IPS: instrucciones por segundo
 	3.1 Frecuencia
-
 ### - 4.Tiempo CPU
 
 
