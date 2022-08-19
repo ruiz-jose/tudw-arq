@@ -22,3 +22,16 @@ Puedes descargar la maquina virtual de la asignatura "tudw-arq-clave=2022.ova" [
 
 
 # Semana 2: Medidas de rendimiento
+
+### - 1. Aceleración: comparación de dos maquinas
+
+### - 2. CPI: promedio de ciclos por instrucción
+
+### - 3. IPS: instrucciones por segundo
+	3.1 Frecuencia
+
+### - 4.Tiempo CPU
+
+
+
+
