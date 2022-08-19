@@ -6,10 +6,10 @@
 
 # Clases de arquitectura de computadoras - Tecnicatura Universitaria en Desarrollo Web - 2022
 
-# Semana 1: ¿Por qué estudiar arquitectura?
-
 Puedes descargar la maquina virtual de la asignatura "tudw-arq-clave=2022.ova" [linux tudw-arq](https://drive.google.com/file/d/1BaPOo7rljAaHxAZYd7Eibd7w6VuXDTI2/view?usp=sharing) e importarla en virtual-box para correr los ejemplos en lenguaje c a traves de una maquina linux con gcc instalado y visual studio code.
 
+
+# Semana 1: ¿Por qué estudiar arquitectura?
 
 ### - 1. Realidad #1: Aritmética en la computadora
   En la computadora los numeros se representan mediante atracciones y de manera finita, por lo tanto es necesario conocer sus limites y sus propiedades. 
