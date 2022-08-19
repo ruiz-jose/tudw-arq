@@ -28,7 +28,7 @@ Puedes descargar la maquina virtual de la asignatura "tudw-arq-clave=2022.ova" [
 ### - 2. CPI: promedio de ciclos por instrucción
 
 ### - 3. IPS: instrucciones por segundo
-	3.1 Frecuencia
+	  3.1 Frecuencia
 ### - 4.Tiempo CPU
 
 
