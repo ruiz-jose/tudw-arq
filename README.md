@@ -33,7 +33,8 @@ Puedes descargar la maquina virtual de la asignatura "tudw-arq-clave=2022.ova" [
 	  4.1 Ejemplo de time en linux (bash)
 
 		El tiempo de ejecucion de un programa en una computadora se descompone en:
-		- 'real' el tiempo desde el principio hasta el final de la llamada, como si lo hubiera medido un ser humano con un cronómetro o reloj de pared. Tambien se define como  tiempo total transcurrido o tiempo de respuesta del programa, incluye los intervalos de tiempo
+		- 'real' el tiempo desde el principio hasta el final de la llamada, como si lo hubiera medido un ser humano con un cronómetro o reloj de pared. 
+                Tambien se define como  tiempo total transcurrido o tiempo de respuesta del programa, incluye los intervalos de tiempo
 		utilizados por otros procesos y el tiempo que el proceso pasa bloqueado (por ejemplo, si está esperando que se complete la E/S).
 		- 'user' es el tiempo del CPU dedicado al código en modo usuario (fuera del kernel) dentro del proceso.
 		Este es solo el tiempo de CPU real utilizado para ejecutar el proceso. Otros procesos y el tiempo que el proceso pasa bloqueado no cuentan para esta cifra.
