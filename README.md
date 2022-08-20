@@ -30,8 +30,24 @@ Puedes descargar la maquina virtual de la asignatura "tudw-arq-clave=2022.ova" [
 ### - 3. IPS: instrucciones por segundo
 	  3.1 Frecuencia y ciclo de reloj
 ### - 4.Tiempo CPU
-	  4.1 Ejemplo de time en linux
+	  4.1 Ejemplo de time en linux (bash)
 
+		El tiempo de ejecucion de un programa en una computadora se descompone en:
+		- 'real' el tiempo desde el principio hasta el final de la llamada, como si lo hubiera medido un ser humano con un cronómetro o reloj de pared. Tambien se define como  tiempo total transcurrido o tiempo de respuesta del programa, incluye los intervalos de tiempo
+		utilizados por otros procesos y el tiempo que el proceso pasa bloqueado (por ejemplo, si está esperando que se complete la E/S).
+		- 'user' es el tiempo del CPU dedicado al código en modo usuario (fuera del kernel) dentro del proceso.
+		Este es solo el tiempo de CPU real utilizado para ejecutar el proceso. Otros procesos y el tiempo que el proceso pasa bloqueado no cuentan para esta cifra.
+		- 'sys' es el tiempo de CPU invertido en el kernel dentro del proceso. Esto significa que el tiempo de CPU dedicado a las llamadas al sistema dentro del kernel.
+		Al igual que 'user', este es solo el tiempo de CPU utilizado por el proceso. 
+		
+		user + sys  dirá cuánto tiempo de CPU real usó su proceso.
+
+Por que?
+real≠ user+ sys.
+
+Que pasa si el programa (proceso) tiene múltiples subprocesos y se ejecuta en un procesador multinucleo?
+user + sys > real
+real representa el tiempo transcurrido real, mientras que los valores user y sys representan el tiempo de ejecución de la CPU. Como resultado, en un sistema multinúcleo el tiempo user y/o sys (así como su suma) podría exceder el tiempo Real o de respuesta, ya que diferentes subprocesos o procesos pueden ejecutarse en paralelo.
 
 
 
