@@ -49,5 +49,5 @@ Que pasa si el programa (proceso) tiene múltiples subprocesos y se ejecuta en u
 user + sys > real
 real representa el tiempo transcurrido real, mientras que los valores user y sys representan el tiempo de ejecución de la CPU. Como resultado, en un sistema multinúcleo el tiempo user y/o sys (así como su suma) podría exceder el tiempo Real o de respuesta, ya que diferentes subprocesos o procesos pueden ejecutarse en paralelo.
 
-
+tiempo real > user + sys, consultar un sitio web pero puede tardar mucho tiempo, es este escenario el proceso espera la respuesta que no depende del tiempo del CPU user y sys.
 
