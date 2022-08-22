@@ -15,7 +15,7 @@
 
 import time
 
-# Obtiene tiempo de inicio
+# Obtiene tiempo de inicio (start time)
 st = time.time()
 
 # main program
@@ -29,9 +29,11 @@ time.sleep(3)
 
 print('La suma de los números de 0 hasta 1 million es:', sum_x)
 
-# Obtiene tiempo de finalizacion
+# Obtiene tiempo de finalizacion (end time)
 et = time.time()
 
-# Calcular diferencia Finalizacion - Inicio 
+# Calcular el tiempo transcurrido: diferencia Finalizacion - Inicio (elapsed time)
 elapsed_time = et - st
 print('Tiempo de respuesta:', elapsed_time, 'segundos')
+
+# El tiempo de respuesta dependera de cada arquitectura
