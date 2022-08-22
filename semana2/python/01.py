@@ -1,22 +1,37 @@
-https://pynative.com/python-get-execution-time-of-program/#wall-time-vs-cpu-time
+
+'''
+    Ejemplo 01.py: 
+
+    Tiempo de respuesta (Wall time: reloj de pared): Es la diferencia entre el momento en que un programa terminó  su ejecución
+    y el momento en que se inició el programa. Es como medir el tiempo con un cronómetro.
+    IMPORTANTE: También incluye el tiempo de espera de los recursos .
+
+    https://www.onlinegdb.com/online_python_compiler
+
+    Ejemplo tomado de:
+    https://pynative.com/python-get-execution-time-of-program/#wall-time-vs-cpu-time
+'''
+
+
 import time
 
-# get the start time
+# Obtiene tiempo de inicio
 st = time.time()
 
 # main program
-# find sum to first 1 million numbers
+# Calcular la suma de los números de 0 hasta 1 million
 sum_x = 0
 for i in range(1000000):
     sum_x += i
 
-# wait for 3 seconds
+# Espera por 3 segundos
 time.sleep(3)
-print('Sum of first 1 million numbers is:', sum_x)
 
-# get the end time
+print('La suma de los números de 0 hasta 1 million es:', sum_x)
+
+# Obtiene tiempo de finalizacion
 et = time.time()
 
-# get the execution time
+# Calcular diferencia Finalizacion - Inicio 
 elapsed_time = et - st
-print('Execution time:', elapsed_time, 'seconds')
+print('Tiempo de respuesta:', elapsed_time, 'segundos')
