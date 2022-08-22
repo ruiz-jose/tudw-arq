@@ -33,3 +33,6 @@ et = time.process_time()
 # Calcular el tiempo CPU: diferencia Finalizacion - Inicio
 res = et - st
 print('Tiempo CPU:', res, 'segundos')
+
+# Debido a que estamos calculando el tiempo CPU, el programa estuvo activo durante más de 3 segundos.
+# Aún así, esos 3 segundos no se agregaron al tiempo CPU.
