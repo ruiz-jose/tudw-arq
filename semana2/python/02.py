@@ -17,7 +17,7 @@ import time
 st = time.process_time()
 
 # main program
-# Calcular la suma de los números de 0 hasta 1 million
+# Calcular la suma del primer millon de numeros (0-999999)
 sum_x = 0
 for i in range(1000000):
     sum_x += i
@@ -25,7 +25,7 @@ for i in range(1000000):
 # Espera por 3 segundos
 time.sleep(3)
 
-print('La suma de los números de 0 hasta 1 million es:', sum_x)
+print('La suma del primer millon de números es:', sum_x)
 
 # Obtiene tiempo de finalizacion (end time)
 et = time.process_time()
