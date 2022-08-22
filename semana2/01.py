@@ -1,3 +1,4 @@
+https://pynative.com/python-get-execution-time-of-program/#wall-time-vs-cpu-time
 import time
 
 # get the start time
