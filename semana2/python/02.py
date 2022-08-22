@@ -1,21 +1,35 @@
+'''
+    Ejemplo 02.py: 
+
+    Tiempo CPU: se refiere al tiempo que la CPU estuvo ocupada procesando las instrucciones del programa.
+    No incluye el tiempo que se pasa esperando que se complete otra tarea (como las operaciones de E/S)
+
+    https://www.onlinegdb.com/online_python_compiler
+
+    Ejemplo tomado de:
+    https://pynative.com/python-get-execution-time-of-program/#wall-time-vs-cpu-time
+
+'''
+
 import time
 
-# get the start time
+# Obtiene tiempo de inicio (start time)
 st = time.process_time()
 
 # main program
-# find sum to first 1 million numbers
+# Calcular la suma de los números de 0 hasta 1 million
 sum_x = 0
 for i in range(1000000):
     sum_x += i
 
-# wait for 3 seconds
+# Espera por 3 segundos
 time.sleep(3)
-print('Sum of first 1 million numbers is:', sum_x)
 
-# get the end time
+print('La suma de los números de 0 hasta 1 million es:', sum_x)
+
+# Obtiene tiempo de finalizacion (end time)
 et = time.process_time()
 
-# get execution time
+# Calcular el tiempo CPU: diferencia Finalizacion - Inicio
 res = et - st
-print('CPU Execution time:', res, 'seconds')
+print('Tiempo CPU:', res, 'segundos')
