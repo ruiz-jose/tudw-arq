@@ -26,11 +26,12 @@ int main()
 {
 	
    // Calcular la suma del primer millon de numeros (0-999999)
-   int suma=0;
-   for(int i=0;i< 1000000;i++){
-         suma += i;
+   long suma=0;
+   for(long i=0;i<1000000;i++){
+      suma += i;
    }
-   printf("'La suma del primer millon de números es: %d\n",suma);
+   printf("La suma del primer millon de números es: %ld \n",suma);
+   
    // duerme 3 segundos el programa
 	sleep(3);
 	return 0;
