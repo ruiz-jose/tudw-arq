@@ -10,6 +10,7 @@
     https://pynative.com/python-get-execution-time-of-program/#wall-time-vs-cpu-time
 
 '''
+# Compilar y correr en python: python3 02.py
 
 import time
 

@@ -8,6 +8,8 @@
       
  '''
 
+# Compilar y correr en python: python3 03.py
+
 # ejemplo 03.c en python 
 x=1e20
 y=-1e20

@@ -4,6 +4,9 @@
     division: el operador >> desplaza todos los bit n unidades a la derecha.
    
  '''
+
+# Compilar y correr en python: python3 04.py
+
 # mover cada bit 3 unidades a la izquierda 
 x=0b1 # x= 1 = binario 0b1
 print(x)

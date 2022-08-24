@@ -18,7 +18,7 @@
 	El valor sys.maxsize informa el tamaño maximo de una estructura de datos en Python.
  '''
 
-
+# Compilar y correr en python: python3 02.py
 
 # importar libreria de python sys y su atributo maxsize
 import sys
