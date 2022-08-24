@@ -1,2 +1,3 @@
 # ignore todoslos ejecutables de C
 *.o
+*.elf
