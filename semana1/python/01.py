@@ -7,7 +7,9 @@
 
     https://www.onlinegdb.com/online_python_compiler
     https://www.online-python.com/
+    
 '''
+# Compilar y correr python: python3 01.py
 
 # 10 elevado 600
 centillion = 10 ** 600
