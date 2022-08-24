@@ -10,7 +10,7 @@
     - Frecuencia y ciclo de reloj
 	
 ### 4.Tiempo de respuesta y tiempo CPU
-    - El tiempo de ejecucion de un programa en una computadora se descompone en en linux con el comando ```time``` (bash):
+    - El tiempo de ejecucion de un programa en una computadora se descompone en linux con el comando ```time``` (bash):
 	+ Tiempo de respuesta o transcurrido **real** : es el tiempo desde el principio hasta el final de ejecucion del programa, 
 	  como si se hubiera medido con un cronómetro o reloj de pared. 
           incluye los intervalos de tiempo utilizados por otros procesos y 
