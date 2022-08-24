@@ -32,6 +32,11 @@ El tiempo de ejecucion de un programa en una computadora se descompone en linux 
 El tiempo de CPU (user + sys) nos dirá cuánto tiempo utilizó el CPU para procesar 
 instrucciones de un programa (user) o sistema operativo (sys).
 		
+Ejemplo del comando df (Disk Filesystem se usa para chequear el espacio en el disco) 
+time df
+real    0m0.243s
+user    0m0.000s
+sys     0m0.063s
 
 - ¿Qué pasa cuando el sistema operativo es multitarea?
 El procesador comparte su tiempo entre los procesos, entonces si el proceso se ejecuta con otros procesos debe esperar su turno para utilizar el CPU.
