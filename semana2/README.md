@@ -11,7 +11,8 @@
     - Millones de instrucciones por segundo (MIPS)
 	
 ### 4.Tiempo de respuesta y tiempo CPU
-    - El tiempo de ejecucion de un programa en una computadora se descompone en linux con el comando ```time``` (bash):
+
+El tiempo de ejecucion de un programa en una computadora se descompone en linux con el comando ```time``` (bash):
 	+ Tiempo de respuesta o transcurrido **real** : es el tiempo desde el principio hasta el final de ejecucion del programa, 
 	  como si se hubiera medido con un cronómetro o reloj de pared. 
           incluye los intervalos de tiempo utilizados por otros procesos y 
@@ -26,16 +27,20 @@
 		- **sys** es el tiempo de CPU invertido en el kernel. 
 		  Esto significa que el tiempo de CPU dedicado a las llamadas al sistema dentro del kernel.
 			
-		El tiempo de CPU (user + sys) nos dirá cuánto tiempo utilizó el CPU para procesar instrucciones de un programa (user) o sistema operativo (sys).
+		El tiempo de CPU (user + sys) nos dirá cuánto tiempo utilizó el CPU para procesar 
+		instrucciones de un programa (user) o sistema operativo (sys).
 		
 
 - ¿Qué pasa cuando el sistema operativo es multitarea?
 El procesador comparte su tiempo entre los procesos.
 - ¿Por qué real ≠ user+ sys?
-   Consultar un sitio web (https://www.fcad.uner.edu.ar/) pero puede tardar mucho tiempo, es este escenario el proceso espera la respuesta que no depende del tiempo  del CPU user y sys.
+   Consultar un sitio web (https://www.fcad.uner.edu.ar/) pero puede tardar mucho tiempo, es este escenario el proceso 
+   espera la respuesta que no depende del tiempo  del CPU user y sys.
 
 - ¿Por qué real > user + sys? ¿Qué pasa si un programa (proceso) tiene múltiples subprocesos y se ejecuta en un procesador multinucleo?
-	real representa el tiempo transcurrido real, mientras que los valores user y sys representan el tiempo de ejecución de la CPU. Como resultado, en un sistema multinúcleo el tiempo user y/o sys (así como su suma) podría exceder el tiempo Real o de respuesta, ya que diferentes subprocesos o procesos pueden ejecutarse en paralelo.
+En un procesador multinucleo un programa puede usar dos o más CPU para el procesamiento mediante la programación de procesamiento en paralelo.
+En tales situaciones, el tiempo de CPU total es la suma del tiempo de CPU consumido por todas las CPU utilizadas por el programa.
+	En un sistema multinúcleo el tiempo user y/o sys (así como su suma) podría exceder el tiempo Real o de respuesta, ya que diferentes subprocesos o procesos pueden ejecutarse en paralelo.
 p.ej.
 
 real    0m5.815s
