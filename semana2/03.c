@@ -11,7 +11,15 @@
 
 #include <stdio.h>
 #include <unistd.h> 	// for sleep()
-
+/*
+corrida en la maquina virtual de clases
+arq@arq-tudw:~/temp/tudw-arq/semana2$ time ./03
+Introduzca su peso en kg como valor numerico: 4
+Gracias
+real	0m6,772s
+user	0m0,001s
+sys	0m0,000s
+*/
 
 int main()
 {
