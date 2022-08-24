@@ -8,6 +8,7 @@
 
 ### 3. IPS: instrucciones por segundo
     - Frecuencia y ciclo de reloj
+    - Millones de instrucciones por segundo (MIPS)
 	
 ### 4.Tiempo de respuesta y tiempo CPU
     - El tiempo de ejecucion de un programa en una computadora se descompone en linux con el comando ```time``` (bash):
