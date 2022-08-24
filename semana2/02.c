@@ -16,7 +16,19 @@ El tiempo de ejecucion de un programa en una computadora se descompone en:
 
 // compilar  gcc ubuntu: gcc 02.c -o 02
 // correr programa:  time ./02
+/*
+corrida en la maquina virtual de clases
+arq@arq-tudw:~/temp/tudw-arq/semana2$ time ./02
+La suma del primer millon de números es: 499999500000 
 
+real	0m3,005s
+user	0m0,004s
+sys	0m0,000s
+
+podemos observar que el programa tiene un tiempo real
+de 3,005 segundos, de los cuales 3 segundos estuvo inactivo
+y 0,004  segundos calculando la suma.
+*/
 
 #include <stdio.h>
 #include <unistd.h> 	// for sleep()
