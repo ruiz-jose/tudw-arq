@@ -48,8 +48,9 @@ Se puede observar el tiempo de CPU consumido por el sistema operativo (sys)
 El procesador comparte su tiempo entre los procesos, entonces si el proceso se ejecuta con otros procesos debe esperar su turno para utilizar el CPU.
 
 - ¿Por qué real ≠ user+ sys?
-   Consultar un sitio web (https://www.fcad.uner.edu.ar/) pero puede tardar mucho tiempo, es este escenario el proceso 
-   espera la respuesta que no depende del tiempo  del CPU user y sys.
+   Consultar el sitio web (https://www.fcad.uner.edu.ar/), en este escenario el proceso espera la respuesta del sitio
+   se puede observar como el programa espera la repuesta del sitio, el tiempo del CPU (sys=0.016s ) representa el tiempo
+   que el sistema operativo realiza la invocación al sitio.
    
    ```time host www.fcad.uner.edu.ar```
    
