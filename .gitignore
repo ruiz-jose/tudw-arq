@@ -1,4 +1,4 @@
-# ignore todoslos ejecutables de C
+# ignore todos los archivos menos estos
 *
 !*.c
 !*.py
