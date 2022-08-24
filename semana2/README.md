@@ -1,41 +1,76 @@
 ##  Semana 2: Medidas de rendimiento
 
-### - 1. Aceleración: comparación de dos maquinas
+### 1. Aceleración: 
+    - Comparación de dos maquinas
+    - Mejorar una parte del sistema
+	
+### 2. CPI: promedio de ciclos por instrucción
 
-### - 2. CPI: promedio de ciclos por instrucción
+### 3. IPS: instrucciones por segundo
+    - Frecuencia y ciclo de reloj
+    - Millones de instrucciones por segundo (MIPS)
+	
+### 4.Tiempo de respuesta y tiempo CPU
 
-### - 3. IPS: instrucciones por segundo
-	  3.1 Frecuencia y ciclo de reloj
-### - 4.Tiempo CPU
-	  4.1 Comando ```time``` en linux (bash)
+El tiempo de ejecucion de un programa en una computadora se descompone en linux con el comando ```time``` (bash):
 
-		El tiempo de ejecucion de un programa en una computadora se descompone en:
-		- **real** es el tiempo desde el principio hasta el final de ejecucion del programa, 
-		  como si se hubiera medido con un cronómetro o reloj de pared. 
-          Tambien se denomina tiempo transcurrido o tiempo de respuesta del programa,
-		  incluye los intervalos de tiempo utilizados por otros procesos y 
-		  el tiempo que el proceso pasa bloqueado (por ejemplo, si está esperando que se complete la E/S).
-		- **user** es el tiempo del CPU dedicado al código en modo usuario (fuera del kernel).
-		  Es el tiempo de CPU realmente utilizado para ejecutar el proceso. 
-		  Otros procesos y el tiempo que el proceso pasa bloqueado no cuentan para esta cifra.
-		- **sys** es el tiempo de CPU invertido en el kernel. 
-		  Esto significa que el tiempo de CPU dedicado a las llamadas al sistema dentro del kernel.
-		  Al igual que 'user', este solo cuenta el tiempo de CPU utilizado por el proceso. 
+-**Tiempo de respuesta o transcurrido (real)** : es el tiempo desde el principio hasta el final de ejecucion del programa, 
+	  como si se hubiera medido con un cronómetro o reloj de pared. 
+         incluye los intervalos de tiempo utilizados por otros procesos y 
+	  el tiempo que el proceso pasa bloqueado (por ejemplo, si está esperando que se complete la E/S).
+	  El tiempo real incluye el tiempo de E/S, intervalos de tiempo utilizados por otros programa (multitarea) 
+	  y todos los demás tipos de espera en los que incurre el programa (sleep).
+	
+-**Tiempo de CPU**: tiempo que utilizo el CPU para ejecutar las instrucciones de un programa, se descompone en:
+
+- **user** es el tiempo del CPU dedicado al código en modo usuario (fuera del kernel).
+	  Es el tiempo de CPU realmente utilizado para ejecutar el proceso. 
+	  Otros procesos y el tiempo que el proceso pasa bloqueado no cuentan para esta cifra.
+- **sys** es el tiempo de CPU invertido en el kernel. 
+	  Esto significa que el tiempo de CPU dedicado a las llamadas al sistema dentro del kernel.
+			
+El tiempo de CPU (user + sys) nos dirá cuánto tiempo utilizó el CPU para procesar 
+instrucciones de un programa (user) o sistema operativo (sys).
 		
-		user + sys  dirá cuánto tiempo utilizó el CPU para procesar instrucciones de un programa o sistema operativo.
-		
+Ejemplo del comando ```df``` (Disk Filesystem se usa para chequear el espacio en el disco) 
 
-¿Por qué real ≠ user+ sys?
+```time df```
 
-Consultar un sitio web (https://www.fcad.uner.edu.ar/) pero puede tardar mucho tiempo, es este escenario el proceso espera la respuesta que no depende del tiempo del CPU user y sys.
+real    0m0.243s
 
-¿Por qué real > user + sys? ¿Qué pasa si un programa (proceso) tiene múltiples subprocesos y se ejecuta en un procesador multinucleo?
+user    0m0.000s
 
-real representa el tiempo transcurrido real, mientras que los valores user y sys representan el tiempo de ejecución de la CPU. Como resultado, en un sistema multinúcleo el tiempo user y/o sys (así como su suma) podría exceder el tiempo Real o de respuesta, ya que diferentes subprocesos o procesos pueden ejecutarse en paralelo.
-p.ej.
+sys     0m0.063s
+
+Se puede observar el tiempo de CPU consumido por el sistema operativo (sys)
+
+- ¿Qué pasa cuando el sistema operativo es multitarea?
+El procesador comparte su tiempo entre los procesos, entonces si el proceso se ejecuta con otros procesos debe esperar su turno para utilizar el CPU.
+
+- ¿Por qué real ≠ user+ sys?
+   Consultar el sitio web (https://www.fcad.uner.edu.ar/), en este escenario el proceso espera la respuesta del sitio
+   se puede observar como el programa espera la repuesta del sitio, el tiempo del CPU (sys=0.016s ) representa el tiempo
+   que el sistema operativo realiza la invocación al sitio.
+   
+   ```time host www.fcad.uner.edu.ar```
+   
+   real    0m0.903s
+   
+   user    0m0.000s
+   
+   sys     0m0.016s
+   
+
+- ¿Por qué real > user + sys? ¿Qué pasa si un programa (proceso) tiene múltiples subprocesos y se ejecuta en un procesador multinucleo?
+En un procesador multinucleo un programa puede usar dos o más CPU para el procesamiento mediante la programación de procesamiento en paralelo.
+En tales situaciones, el tiempo de CPU total es la suma del tiempo de CPU consumido por todas las CPU utilizadas por el programa.
+En un sistema multinúcleo el tiempo user y/o sys (así como su suma) podría exceder el tiempo Real o de respuesta, 
+ya que diferentes subprocesos o procesos pueden ejecutarse en paralelo.p.ej.
 
 real    0m5.815s
+
 user    0m8.213s
+
 sys     0m0.473s
 
 
