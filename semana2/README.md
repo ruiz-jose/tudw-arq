@@ -50,6 +50,14 @@ El procesador comparte su tiempo entre los procesos, entonces si el proceso se e
 - ¿Por qué real ≠ user+ sys?
    Consultar un sitio web (https://www.fcad.uner.edu.ar/) pero puede tardar mucho tiempo, es este escenario el proceso 
    espera la respuesta que no depende del tiempo  del CPU user y sys.
+   
+   ```time host www.fcad.uner.edu.ar```
+   real    0m0.903s
+   
+   user    0m0.000s
+   
+   sys     0m0.016s
+   
 
 - ¿Por qué real > user + sys? ¿Qué pasa si un programa (proceso) tiene múltiples subprocesos y se ejecuta en un procesador multinucleo?
 En un procesador multinucleo un programa puede usar dos o más CPU para el procesamiento mediante la programación de procesamiento en paralelo.
