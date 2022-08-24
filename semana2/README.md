@@ -13,22 +13,24 @@
 ### 4.Tiempo de respuesta y tiempo CPU
 
 El tiempo de ejecucion de un programa en una computadora se descompone en linux con el comando ```time``` (bash):
-	+ Tiempo de respuesta o transcurrido **real** : es el tiempo desde el principio hasta el final de ejecucion del programa, 
+
+-**Tiempo de respuesta o transcurrido (real)** : es el tiempo desde el principio hasta el final de ejecucion del programa, 
 	  como si se hubiera medido con un cronómetro o reloj de pared. 
-          incluye los intervalos de tiempo utilizados por otros procesos y 
+         incluye los intervalos de tiempo utilizados por otros procesos y 
 	  el tiempo que el proceso pasa bloqueado (por ejemplo, si está esperando que se complete la E/S).
 	  El tiempo real incluye el tiempo de E/S, intervalos de tiempo utilizados por otros programa (multitarea) 
 	  y todos los demás tipos de espera en los que incurre el programa (sleep).
 	
-	+ Tiempo de CPU: tiempo que utilizo el CPU para ejecutar las instrucciones de un programa, se descompone en:
-		- **user** es el tiempo del CPU dedicado al código en modo usuario (fuera del kernel).
-		  Es el tiempo de CPU realmente utilizado para ejecutar el proceso. 
-		  Otros procesos y el tiempo que el proceso pasa bloqueado no cuentan para esta cifra.
-		- **sys** es el tiempo de CPU invertido en el kernel. 
-		  Esto significa que el tiempo de CPU dedicado a las llamadas al sistema dentro del kernel.
+-**Tiempo de CPU**: tiempo que utilizo el CPU para ejecutar las instrucciones de un programa, se descompone en:
+
+- **user** es el tiempo del CPU dedicado al código en modo usuario (fuera del kernel).
+	  Es el tiempo de CPU realmente utilizado para ejecutar el proceso. 
+	  Otros procesos y el tiempo que el proceso pasa bloqueado no cuentan para esta cifra.
+- **sys** es el tiempo de CPU invertido en el kernel. 
+	  Esto significa que el tiempo de CPU dedicado a las llamadas al sistema dentro del kernel.
 			
-		El tiempo de CPU (user + sys) nos dirá cuánto tiempo utilizó el CPU para procesar 
-		instrucciones de un programa (user) o sistema operativo (sys).
+El tiempo de CPU (user + sys) nos dirá cuánto tiempo utilizó el CPU para procesar 
+instrucciones de un programa (user) o sistema operativo (sys).
 		
 
 - ¿Qué pasa cuando el sistema operativo es multitarea?
