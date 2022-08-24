@@ -1,27 +1,4 @@
 # ignore todoslos ejecutables de C
-*.lst
-*.o
-*.eep
-*.lss
-*.map
-*.sym
-
-# I keep these, since I prefer having the reference of the final build
-*.elf
-*.hex
-*.swp
-.~
-*.o
-*.elf
-*~
-.#*
-*#
-*.flt
-*.gmo
-*.info
-*.la
-*.lo
-*.o
-*.pyc
-*.tmp
-*.a
+*
+!*.c
+!*.py
