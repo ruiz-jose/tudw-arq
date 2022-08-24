@@ -45,6 +45,7 @@ sys     0m0.063s
 Se puede observar el tiempo de CPU consumido por el sistema operativo (sys)
 
 - ¿Qué pasa cuando el sistema operativo es multitarea?
+Las computadoras solo pueden hacer una tarea (o proceso ) a la vez. Pero una computadora puede cambiar tareas muy rápidamente y engañar a seres humanos lentos haciéndoles creer que está haciendo varias cosas a la vez. Esto se llama tiempo compartido.
 El procesador comparte su tiempo entre los procesos, entonces si el proceso se ejecuta con otros procesos debe esperar su turno para utilizar el CPU.
 
 - ¿Por qué real ≠ user+ sys?
