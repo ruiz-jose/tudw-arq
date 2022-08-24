@@ -52,6 +52,7 @@ El procesador comparte su tiempo entre los procesos, entonces si el proceso se e
    espera la respuesta que no depende del tiempo  del CPU user y sys.
    
    ```time host www.fcad.uner.edu.ar```
+   
    real    0m0.903s
    
    user    0m0.000s
