@@ -27,7 +27,7 @@ sys	0m0,000s
 
 podemos observar que el programa tiene un tiempo real
 de 3,005 segundos, de los cuales 3 segundos estuvo inactivo
-y 0,004  segundos calculando la suma.
+son consumir CPU para el programa y 0,004 segundos calculando la suma.
 */
 
 #include <stdio.h>
