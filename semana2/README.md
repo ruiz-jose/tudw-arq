@@ -16,6 +16,8 @@
 	  como si se hubiera medido con un cronómetro o reloj de pared. 
           incluye los intervalos de tiempo utilizados por otros procesos y 
 	  el tiempo que el proceso pasa bloqueado (por ejemplo, si está esperando que se complete la E/S).
+	  El tiempo real incluye el tiempo de E/S, intervalos de tiempo utilizados por otros programa (multitarea) 
+	  y todos los demás tipos de espera en los que incurre el programa (sleep).
 	
 	+ Tiempo de CPU: tiempo que utilizo el CPU para ejecutar las instrucciones de un programa, se descompone en:
 		- **user** es el tiempo del CPU dedicado al código en modo usuario (fuera del kernel).
@@ -24,10 +26,11 @@
 		- **sys** es el tiempo de CPU invertido en el kernel. 
 		  Esto significa que el tiempo de CPU dedicado a las llamadas al sistema dentro del kernel.
 			
-		user + sys  dirá cuánto tiempo utilizó el CPU para procesar instrucciones de un programa (user) o sistema operativo (sys).
+		El tiempo de CPU (user + sys) nos dirá cuánto tiempo utilizó el CPU para procesar instrucciones de un programa (user) o sistema operativo (sys).
 		
 
 - ¿Qué pasa cuando el sistema operativo es multitarea?
+El procesador comparte su tiempo entre los procesos.
 - ¿Por qué real ≠ user+ sys?
    Consultar un sitio web (https://www.fcad.uner.edu.ar/) pero puede tardar mucho tiempo, es este escenario el proceso espera la respuesta que no depende del tiempo  del CPU user y sys.
 
