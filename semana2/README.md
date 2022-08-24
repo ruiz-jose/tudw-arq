@@ -34,7 +34,7 @@ instrucciones de un programa (user) o sistema operativo (sys).
 		
 
 - ¿Qué pasa cuando el sistema operativo es multitarea?
-El procesador comparte su tiempo entre los procesos.
+El procesador comparte su tiempo entre los procesos, entonces si el proceso se ejecuta con otros procesos debe esperar su turno para utilizar el CPU.
 
 - ¿Por qué real ≠ user+ sys?
    Consultar un sitio web (https://www.fcad.uner.edu.ar/) pero puede tardar mucho tiempo, es este escenario el proceso 
@@ -43,8 +43,8 @@ El procesador comparte su tiempo entre los procesos.
 - ¿Por qué real > user + sys? ¿Qué pasa si un programa (proceso) tiene múltiples subprocesos y se ejecuta en un procesador multinucleo?
 En un procesador multinucleo un programa puede usar dos o más CPU para el procesamiento mediante la programación de procesamiento en paralelo.
 En tales situaciones, el tiempo de CPU total es la suma del tiempo de CPU consumido por todas las CPU utilizadas por el programa.
-	En un sistema multinúcleo el tiempo user y/o sys (así como su suma) podría exceder el tiempo Real o de respuesta, ya que diferentes subprocesos o procesos pueden ejecutarse en paralelo.
-p.ej.
+En un sistema multinúcleo el tiempo user y/o sys (así como su suma) podría exceder el tiempo Real o de respuesta, 
+ya que diferentes subprocesos o procesos pueden ejecutarse en paralelo.p.ej.
 
 real    0m5.815s
 
