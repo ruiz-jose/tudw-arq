@@ -35,6 +35,7 @@ instrucciones de un programa (user) o sistema operativo (sys).
 
 - ¿Qué pasa cuando el sistema operativo es multitarea?
 El procesador comparte su tiempo entre los procesos.
+
 - ¿Por qué real ≠ user+ sys?
    Consultar un sitio web (https://www.fcad.uner.edu.ar/) pero puede tardar mucho tiempo, es este escenario el proceso 
    espera la respuesta que no depende del tiempo  del CPU user y sys.
@@ -46,7 +47,9 @@ En tales situaciones, el tiempo de CPU total es la suma del tiempo de CPU consum
 p.ej.
 
 real    0m5.815s
+
 user    0m8.213s
+
 sys     0m0.473s
 
 
