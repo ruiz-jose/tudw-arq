@@ -29,6 +29,9 @@ El tiempo de ejecucion de un programa en una computadora se descompone en linux 
 - **sys** es el tiempo de CPU invertido en el kernel. 
 	  Esto significa que el tiempo de CPU dedicado a las llamadas al sistema dentro del kernel.
 			
+
+Consideraciones tiempo de respuesta y tiempo CPU
+
 El tiempo de CPU (user + sys) nos dirá cuánto tiempo utilizó el CPU para procesar 
 instrucciones de un programa (user) o sistema operativo (sys).
 		
