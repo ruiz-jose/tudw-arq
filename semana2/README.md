@@ -32,25 +32,25 @@ El tiempo de ejecucion de un programa en una computadora se descompone en linux 
 
 **Consideraciones tiempo de respuesta y tiempo CPU**
 
-El tiempo de CPU (user + sys) nos dirá cuánto tiempo utilizó el CPU para procesar 
-instrucciones de un programa (user) o sistema operativo (sys).
-		
-Ejemplo del comando ```df``` (Disk Filesystem se usa para chequear el espacio en el disco) 
+    El tiempo de CPU (user + sys) nos dirá cuánto tiempo utilizó el CPU para procesar 
+    instrucciones de un programa (user) o sistema operativo (sys).
+            
+    Ejemplo del comando ```df``` (Disk Filesystem se usa para chequear el espacio en el disco) 
 
-```time df```
+    ```time df```
 
-real    0m0.243s
+    real    0m0.243s
 
-user    0m0.000s
+    user    0m0.000s
 
-sys     0m0.063s
+    sys     0m0.063s
 
-Se puede observar el tiempo de CPU consumido por el sistema operativo (sys)
+    Se puede observar el tiempo de CPU consumido por el sistema operativo (sys)
 
 - ¿Qué pasa cuando el sistema operativo es multitarea?
-Las computadoras solo pueden hacer una tarea (o proceso ) a la vez. Pero una computadora puede cambiar tareas muy rápidamente y engañar a seres humanos lentos haciéndoles creer que está haciendo varias cosas a la vez. Esto se llama tiempo compartido.
-Uno de los trabajos del kernel es administrar el tiempo compartido. Cada 1/60 de segundo, el scheduler detiene cualquier proceso que se esté ejecutando actualmente, lo suspende en su lugar y le pasa el control a otro proceso.
-El procesador comparte su tiempo entre los procesos, entonces si el proceso se ejecuta con otros procesos debe esperar su turno para utilizar el CPU.
+    Las computadoras solo pueden hacer una tarea (o proceso ) a la vez. Pero una computadora puede cambiar tareas muy rápidamente y engañar a seres humanos lentos haciéndoles creer que está haciendo varias cosas a la vez. Esto se llama tiempo compartido.
+    Uno de los trabajos del kernel es administrar el tiempo compartido. Cada 1/60 de segundo, el scheduler detiene cualquier proceso que se esté ejecutando actualmente, lo suspende en su lugar y le pasa el control a otro proceso.
+    El procesador comparte su tiempo entre los procesos, entonces si el proceso se ejecuta con otros procesos debe esperar su turno para utilizar el CPU.
 
 - ¿Por qué real ≠ user+ sys?
    Consultar el sitio web (https://www.fcad.uner.edu.ar/), en este escenario el proceso espera la respuesta del sitio
@@ -67,16 +67,16 @@ El procesador comparte su tiempo entre los procesos, entonces si el proceso se e
    
 
 - ¿Por qué real > user + sys? ¿Qué pasa si un programa (proceso) tiene múltiples subprocesos y se ejecuta en un procesador multinucleo?
-En un procesador multinucleo un programa puede usar dos o más CPU para el procesamiento mediante la programación de procesamiento en paralelo.
-En tales situaciones, el tiempo de CPU total es la suma del tiempo de CPU consumido por todas las CPU utilizadas por el programa.
-En un sistema multinúcleo el tiempo user y/o sys (así como su suma) podría exceder el tiempo Real o de respuesta,ya que diferentes subprocesos o procesos pueden ejecutarse en paralelo.
-p.ej.
+    En un procesador multinucleo un programa puede usar dos o más CPU para el procesamiento mediante la programación de procesamiento en paralelo.
+    En tales situaciones, el tiempo de CPU total es la suma del tiempo de CPU consumido por todas las CPU utilizadas por el programa.
+    En un sistema multinúcleo el tiempo user y/o sys (así como su suma) podría exceder el tiempo Real o de respuesta,ya que diferentes subprocesos o procesos pueden ejecutarse en paralelo.
+    p.ej.
 
-real    0m5.815s
+    real    0m5.815s
 
-user    0m8.213s
+    user    0m8.213s
 
-sys     0m0.473s
+    sys     0m0.473s
 
 
 
