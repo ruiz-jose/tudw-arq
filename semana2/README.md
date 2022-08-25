@@ -30,7 +30,7 @@ El tiempo de ejecucion de un programa en una computadora se descompone en linux 
 	  Esto significa que el tiempo de CPU dedicado a las llamadas al sistema dentro del kernel.
 			
 
-Consideraciones tiempo de respuesta y tiempo CPU
+**sConsideraciones tiempo de respuesta y tiempo CPU**
 
 El tiempo de CPU (user + sys) nos dirá cuánto tiempo utilizó el CPU para procesar 
 instrucciones de un programa (user) o sistema operativo (sys).
@@ -71,12 +71,13 @@ En un procesador multinucleo un programa puede usar dos o más CPU para el proce
 En tales situaciones, el tiempo de CPU total es la suma del tiempo de CPU consumido por todas las CPU utilizadas por el programa.
 En un sistema multinúcleo el tiempo user y/o sys (así como su suma) podría exceder el tiempo Real o de respuesta, 
 ya que diferentes subprocesos o procesos pueden ejecutarse en paralelo.p.ej.
-
 real    0m5.815s
-
 user    0m8.213s
-
 sys     0m0.473s
+
+
+
+
 
 
 
