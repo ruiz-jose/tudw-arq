@@ -10,6 +10,6 @@
       - Memoria.
 
 **Arquitectura Acumulador (ACC)**
-Probemos el simulador con [arquitectura acumulador](http://vnsimulator.altervista.org/) 
-[codigo fuente](https://github.com/c2r0b/vnmsim)
+Probemos el simulador en [arquitectura acumulador](http://vnsimulator.altervista.org/)
+Ver su codigo fuente en: [codigo fuente](https://github.com/c2r0b/vnmsim)
 
