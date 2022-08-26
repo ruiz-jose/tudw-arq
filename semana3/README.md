@@ -9,6 +9,6 @@
       - Pasos de la Unidad de control
       - Memoria.
     - Arquitectura Acumulador (ACC)
-      - Probemos el simulador http://vnsimulator.altervista.org/ 
-        codigo fuente: https://github.com/c2r0b/vnmsim
+      - Probemos el simulador con [arquitectura acumulador] linux tudw-arq(http://vnsimulator.altervista.org/) 
+        [codigo fuente]: https://github.com/c2r0b/vnmsim
 
