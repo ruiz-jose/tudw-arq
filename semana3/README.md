@@ -4,6 +4,8 @@
      - Etaqa de captación y ejecución 
 
 ### 2. Componentes de la computadoras
-    - CPU: Unidad de Aritmética y lógica (ALU) y Registros.
-    - Memoria.
+    - CPU: 
+      - Unidad de Aritmética y lógica (ALU) y Registros.
+      - Pasos de la Unidad de control
+      - Memoria.
     - Arquitectura Acumulador (ACC)
