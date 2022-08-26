@@ -8,7 +8,8 @@
       - Unidad de Aritmética y lógica (ALU) y Registros.
       - Pasos de la Unidad de control
       - Memoria.
-    - Arquitectura Acumulador (ACC)
-      - Probemos el simulador con [arquitectura acumulador](http://vnsimulator.altervista.org/) 
-        [codigo fuente](https://github.com/c2r0b/vnmsim)
+
+**Arquitectura Acumulador (ACC)**
+Probemos el simulador con [arquitectura acumulador](http://vnsimulator.altervista.org/) 
+[codigo fuente](https://github.com/c2r0b/vnmsim)
 
