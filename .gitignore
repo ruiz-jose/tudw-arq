@@ -1,6 +1,7 @@
 # ignore todos los archivos menos estos
-#*
-#!*.c
-#!*.py
-#!*.md
-#!*.svg
+*
+!*.c
+!*.py
+!*.md
+!*.svg
+!semana*
