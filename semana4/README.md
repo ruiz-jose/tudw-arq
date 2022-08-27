@@ -5,10 +5,11 @@
 ### 1. Arquitectura Acumulador 
 Hagamos nuestra arquitectura acumulador en python
 
-Repertorio de instrucciones 
+**Repertorio de instrucciones **
 load direccion
 add direccion
 store direccion
+
 
 CPU 20 Hz 1/20 = 0.05 segundos
 Memoria RAM 10 Hz = 0.1 
