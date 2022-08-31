@@ -5,7 +5,6 @@
 
 ## Tabla de contenido
 
-* [Índice](#índice-de-contenido)
 * [Arquitectura_Acumulador](#Arquitectura_Acumulador)
 * [Usando_ensamblador](#Usando_ensamblador)
    * [Repertorio_de_instrucciones](#Repertorio_de_instrucciones)
@@ -148,5 +147,5 @@ Ejecute:
     Por ejemplo los ciclos de reloj para la instruccion LDA x (14 ciclos)
 
         - etapa captacion 3 ciclos CPU + 4 ciclos RAM (fetch: instruccion LDA x) 
-        
+
         - etapa ejecucion 3 ciclos CPU + 4 ciclos RAM (fetch: dato x)  
