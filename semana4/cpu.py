@@ -80,18 +80,21 @@ def main(filename):
         except Exception as e:
             print("HALTING System...")
             break;
+    print(" -------------------------------------------")
     print("Program-Cycles: ?")
     print("RI: ?")
     print("CPI: ?")
     print("Time CPU: ?")
-    
+    print(" -------------------------------------------")
+
 if __name__ == "__main__":
     try:
         filename = sys.argv[1]
     except:
         print(" -------------------------------------------")
         print("|Usage: python cpu.py  <asm filename>      |")
-        print("|Example: python cpu.py code.asm           |")
+        print("|Example win: python cpu.py code.asm       |")
+        print("|Example linux: python3 cpu.py code.asm    |")
         print(" ------------------------------------------\n")
         exit()
     main(filename)
