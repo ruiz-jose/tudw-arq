@@ -22,6 +22,7 @@ class CPU:
 
     def fetch(self):
         #decode instruction from opcode by masking higher 6 bits
+        print(f"------------------MEM[{self.PC}]-------------------------")
         self.MAR = self.PC
         self.MDR = self.memory[self.MAR]
         self.PC += 1
@@ -33,7 +34,7 @@ class CPU:
         opcode = (self.IR >> 6)
         address = (self.IR & 0x3F)
         #print(f"IR (opcode|address)= {opcode}|{address}")
-
+        
         #execute
         if(opcode == 0x0):
             #LDA

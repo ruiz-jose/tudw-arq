@@ -49,7 +49,7 @@ class ASSEMBLY:
                 pc = pc + 1
         pc = 0 #set back to zero so we can show line numbers on output.
 
-
+        print("|---Code.asm---|")
         #iterate through the tokens, convert them to int
         #values based on instruction set and append it to output
         for i in range(len(tokens)):
@@ -76,5 +76,7 @@ class ASSEMBLY:
                     pc = pc + 1
             except Exception as e:
                 output.append(hex(0))
+        print("|---end---|")    
+        print()    
         self.code = list(output)
 
