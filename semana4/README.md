@@ -12,7 +12,8 @@
    * [Comentarios](#comentarios)
    * [Etiquetas](#etiquetas)
    * [Espacio_en_blanco](#Espacio-en-blanco)
-* [Lista_de_instrucciones_admitidas](#Lista_de_instrucciones_admitidas)
+* [Ejecutar_código](#Ejecutar_código)
+* [Para_hacer](#Para_hacer)
 
 
 ## Arquitectura_Acumulador 
