@@ -4,4 +4,5 @@
 !*.py
 !*.md
 !*.svg
+!*.asm
 !semana*
