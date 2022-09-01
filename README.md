@@ -1,17 +1,150 @@
-<div align="center">
-	<a href="https://github.com/ruiz-jose/tudw-arq/header.svg">
-		<img src="header.svg" width="800" height="400" alt="TUDW-ARQ">
-	</a>	
-</div>
+##  Arquitectura acumulador (ACC)
 
-# Clases de arquitectura de computadoras - Tecnicatura Universitaria en Desarrollo Web - 2022
+## Tabla de contenido
 
-> **NOTE** - Puedes descargar la maquina virtual de la asignatura "tudw-arq-clave=2022.ova" [linux tudw-arq](https://drive.google.com/file/d/1BaPOo7rljAaHxAZYd7Eibd7w6VuXDTI2/view?usp=sharing) e importarla en virtual-box para correr los ejemplos en lenguaje c a traves de una maquina linux con gcc instalado y visual studio code.
+* [Arquitectura_Acumulador](#Arquitectura_Acumulador)
+* [Usando_ensamblador](#Usando_ensamblador)
+   * [Repertorio_de_instrucciones](#Repertorio_de_instrucciones)
+      * [Instrucciones_implementadas](#Instrucciones_implementadas)
+   * [Comentarios](#comentarios)
+   * [Etiquetas](#etiquetas)
+   * [Espacio_en_blanco](#Espacio-en-blanco)
+* [Ejecutar_código](#Ejecutar_código)
+* [Para_hacer](#Para_hacer)
+
+
+## Arquitectura_Acumulador 
+
+En base EaterEmulator emulates [Ben Eater's](https://www.youtube.com/channel/UCS0N5baNlQWJCUrhCEo8WlA) trabajaremos con python para aprender la arquitectura acumulador de 8 bits.
+La CPU de 8 bits tiene solo 64 bytes de RAM. Su programa debe caber en 64 bytes y esto incluye cualquier dato que necesite para inicializar el programa.Un bus de direcciones tiene 6 bits = 2**6 = 64 posiciones y un bus de datos de 8 bits = 1 byte
+
+## Usando_ensamblador
+
+Este proyecto incluye un Ensamblador  que admite algunas de las capacidades estándar que esperaría encontrar en un ensamblador.
+
+Cree un archivo .asm y escriba su programa en ensamblador. 
+El programa puede tener un maximo de 64 líneas.
+
+La cpu se encarga de traducir el programa ensamblador a codigo maquina
+
+Por ejemplo: si desea escribir un programa que sume 5 + 3, debería ser algo como esto
+
+``` asm
+0 LDA 4
+1 ADD 5
+2 STA 6
+3 HLT
+4 5
+5 3
+6 0
+```
+
+En la `línea 0`, podemos ver `LDA 4`, esto significa que carga el valor de la `dirección 4` en el `registro ACC`. Esta `dirección 4` está en la `línea 4` que tiene un valor de `5`. Por lo tanto, carga `5` en el `registro ACC`.
+
+En la `línea 1`, tenemos `ADD 5`, esto almacenará el contenido de la `dirección 5` en el `registro MDR`, luego agrega este valor al contenido del `registro ACC`, por lo tanto, el valor final del `registro ACC` será `8`.
+
+En la `línea 2`, tenemos `STA 6`, esto almacenará el contenido `registro ACC` en la `dirección 6`.
+
+En la `línea 3`, tenemos `HLT`, esto detiene el programa.
+
+
+### Repertorio_de_instrucciones
+
+| OpCode | Mnemonic | Description
+|--------|----------|------------
+| 00     | LDA      | Cargar el contenido de la dirección de memoria XXXX en el registro ACC
+| 01     | STA      | Almacenar el contenido del registro ACC en la dirección de memoria XXXX
+| 10     | ADD      | Sumar el registro ACC con el contenido de memoria XXXX
+| 11     | HLT      | Detiene la ejecución.
+
+
+#### Instrucciones_implementadas
+
+- [x] LDA
+- [x] STA
+- [x] ADD
+- [x] HLT
+- [ ] SUB
 
 
 
-##  **[Semana 1](/semana1/README.md)**
-##  **[Semana 2](/semana2/README.md)**
-##  **[Semana 3](/semana3/README.md)**
-##  **[Semana 4](/semana4/README.md)**
+### Comentarios
+
+Los comentarios son ignorados por el ensamblador y siempre van precedidos por un punto y coma. (`;`)
+
+``` asm
+; Este es un comentario en una línea por sí mismo.
+  LDA 15 ; Este es un comentario en línea y debe estar al final de una línea.
+  ```
+
+
+### Etiquetas
+
+* Las etiquetas deben estar en una línea por sí mismas.
+* Sin espacios en blanco antes de la etiqueta.
+* El ensamblador buscará una etiqueta basada en esta expresión regular: `"^\w*:$"` IE: Inicio de línea, cualquier número de caracteres alfanuméricos y guiones bajos, pero sin espacios en blanco y dos puntos (`:`) al final.
+* Cuando utilice una etiqueta en una instrucción, NO incluya los dos puntos al final.
+
+
+``` asm
+; programa simple
+start:
+    LDA x
+    ADD y
+    STA z
+    HLT
+x:
+    3
+y:
+    2
+z:
+    2
+```
+
+En este ejemplo, las etiquetas: 'start', 'x', 'y' y 'z' actúan como punteros a direcciones de memoria. El ensamblador pasará primero por el código para encontrar todas las etiquetas y registrar sus direcciones de memoria. Luego, en la segunda pasada, sustituirá las etiquetas por las direcciones reales. 
+
+
+### Espacio_en_blanco
+
+Se requiere al menos un carácter de espacio en blanco entre los mnemotécnicos que requieren argumentos y sus argumentos.
+
+
+## Ejecutar_código
+
+Se requiere la instalación de la versión `Python 3.x`.
+Clone este repositorio `git clone https://github.com/ruiz-jose/tudw-arq.git` 
+Ejecute:
+
+```
+ python cpu.py <nombre de archivo asm>
+```
+
+## Para_hacer
+
+- Caclular los ciclos de reloj para el programa (**Program-Cycles**)
+
+- Caclular recuento de instruccoines para el programa (**RI**)
+
+- Caclular promedio de ciclos por instruccion para el programa (**CPI**)
+
+- Caclular los tiempo de CPU para el programa (**Time CPU**) sabiendo que:
+
+    Para calcular el Tiempo de CPU tenga en cuenta:
+    * CPU funciana a 20 Hz
+
+        - Duracion del ciclo 1/20 = 0.05 segundos
+
+    * Memoria RAM funciona a 10 Hz
+
+        - Duracion del ciclo 1/10 = 0.1 segundos
+
+        - Tarda 2 ciclos de RAM en una read/write  = 0.2 segundos
+
+        - El CPU queda en espera por 4 ciclos por cada operacion de lectura o escritura (0.05 * 4 = 0.02 segundos)
+
+    Por ejemplo los ciclos de reloj para la instruccion LDA x (14 ciclos)
+
+        - etapa captacion 3 ciclos CPU + 4 ciclos RAM (fetch: instruccion LDA x) 
+
+        - etapa ejecucion 3 ciclos CPU + 4 ciclos RAM (fetch: dato x)  
 
