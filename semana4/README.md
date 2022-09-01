@@ -1,7 +1,6 @@
 ##  Semana 4: Aprender Arquitectura programando!! (Idea: Christiam Gregorio Rey Pacheco)
 
-** Objetivo: comprender como funcionamiento de la arquitectura acumulador (programando)**
-
+Objetivo: comprender como funcionamiento de la arquitectura acumulador (programando)
 
 ## Tabla de contenido
 
