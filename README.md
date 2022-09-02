@@ -11,6 +11,8 @@
    * [Espacio_en_blanco](#Espacio-en-blanco)
 * [Ejecutar_código](#Ejecutar_código)
 * [Para_hacer](#Para_hacer)
+    * [Ciclos_instrucciones](#Ciclos_instrucciones)
+
 
 
 ## Arquitectura_Acumulador 
@@ -142,9 +144,22 @@ Ejecute:
 
         - El CPU queda en espera por 4 ciclos por cada operacion de lectura o escritura (0.05 * 4 = 0.02 segundos)
 
-    Por ejemplo los ciclos de reloj para la instruccion LDA x (14 ciclos)
+### Ciclos_instrucciones
 
-        - etapa captacion 3 ciclos CPU + 4 ciclos RAM (fetch: instruccion LDA x) 
+| Mnemonic | Ciclos
+|----------|------------
+| LDA      | 14 ciclos
+| STA      | 14 ciclos
+| ADD      | 14 ciclos
+| HLT      | 8 ciclos
 
-        - etapa ejecucion 3 ciclos CPU + 4 ciclos RAM (fetch: dato x)  
+
+Por ejemplo los ciclos de reloj para la instruccion LDA x (14 ciclos)
+
+- Etapa captacion:
+    * 3 ciclos CPU (captar instruccion) + 4 ciclos de espera de CPU a que la memoria devuelva la instrucción LDA
+
+- Etapa ejecucion:
+    * 3 ciclos CPU (ejecutar instruccion) + 4 ciclos de espera de CPU a que la memoria devuelva el dato x (LDA x) 
+
 
