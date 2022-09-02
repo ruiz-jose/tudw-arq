@@ -50,12 +50,12 @@ En la `línea 3`, tenemos `HLT`, esto detiene el programa.
 
 ### Repertorio_de_instrucciones
 
-| OpCode | Mnemonic | Description
-|--------|----------|------------
-| 00     | LDA      | Cargar el contenido de la dirección de memoria XXXX en el registro ACC
-| 01     | STA      | Almacenar el contenido del registro ACC en la dirección de memoria XXXX
-| 10     | ADD      | Sumar el registro ACC con el contenido de memoria XXXX
-| 11     | HLT      | Detiene la ejecución.
+| OpCode | Mnemonic     | Description
+|--------|--------------|------------
+| 00     | **LDA** xxx  | Cargar el contenido de la dirección de memoria xxx en el registro ACC
+| 01     | **STA** xxx  | Almacenar el contenido del registro ACC en la dirección de memoria xxx
+| 10     | **ADD** xxx  | Sumar el registro ACC con el contenido de memoria xxx
+| 11     | **HLT**      | Detiene la ejecución
 
 
 #### Instrucciones_implementadas
