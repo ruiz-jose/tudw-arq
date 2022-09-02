@@ -22,12 +22,12 @@ class CPU:
 
     def fetch(self):
         #decode instruction from opcode by masking higher 6 bits
-        print(f"------------------MEM[{self.PC}]-------------------------")
+        print(f"------------------memory[{self.PC}]-------------------------")
         self.MAR = self.PC
         self.MDR = self.memory[self.MAR]
         self.PC += 1
         self.IR = self.MDR
-        print (f"fetching  IR({self.IR}) ← PC({self.PC-1})")
+        print (f"fetching memory[{self.PC-1}] => IR({self.IR}) ← PC({self.PC-1})")
 
     def execute(self):
         #decode instruction from opcode by masking higher 6 bits
@@ -41,23 +41,23 @@ class CPU:
             self.MAR =  address
             self.MDR =  self.memory[self.MAR]
             self.ACC =  self.MDR
-            print(f"executing LDA {address} =>  ACC({self.ACC}) ← memory[{address}]")
+            print(f"executing LDA {address}    => ACC({self.ACC}) ← memory[{address}]")
            
         elif(opcode == 0x1):
             #STA
             self.MAR = address
             self.MDR = self.ACC 
             self.memory[self.MAR] = self.MDR 
-            print(f"executing STA {address} => memory[{address}] ← ACC({self.ACC})")
+            print(f"executing STA {address}    => memory[{address}] ← ACC({self.ACC})")
         elif(opcode == 0x2):
             #ADD
             self.MDR = self.memory[address]
-            print(f"executing ADD {address} =>  ACC({self.ACC + self.MDR}) ← ACC({self.ACC}) + MDR({self.MDR})")
+            print(f"executing ADD {address}    => ACC({self.ACC + self.MDR}) ← ACC({self.ACC}) + MDR({self.MDR})")
             self.ACC = self.ACC + self.MDR           
         elif(opcode == 0x3):
             #HLT
             self.HLT = True
-            print("executing HLT")
+            print("executing HLT      => stop CPU")
         else:
             print(f"Illegal opcode {hex(opcode)}")
 
@@ -81,7 +81,7 @@ def main(filename):
         except Exception as e:
             print("HALTING System...")
             break;
-    print(" -------------------------------------------")
+    print(" ---------------------------------------------------")
     print("Program-Cycles: ?")
     print("RI: ?")
     print("CPI: ?")
