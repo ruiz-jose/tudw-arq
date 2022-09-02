@@ -1,4 +1,4 @@
-mport sys
+import sys
 from assembly import ASSEMBLY
 
 class CPU:
