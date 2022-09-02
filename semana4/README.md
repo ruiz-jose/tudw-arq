@@ -13,6 +13,8 @@ Objetivo: comprender como funcionamiento de la arquitectura acumulador (programa
    * [Espacio_en_blanco](#Espacio-en-blanco)
 * [Ejecutar_código](#Ejecutar_código)
 * [Para_hacer](#Para_hacer)
+    * [Ciclos_instrucciones](#Ciclos_instrucciones)
+
 
 
 ## Arquitectura_Acumulador 
@@ -144,7 +146,8 @@ Ejecute:
 
         - El CPU queda en espera por 4 ciclos por cada operacion de lectura o escritura (0.05 * 4 = 0.02 segundos)
 
-Ciclos instrucciones
+### Ciclos_instrucciones
+
 | Mnemonic | Ciclos
 |----------|------------
 | LDA      | 14 ciclos
