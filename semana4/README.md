@@ -29,7 +29,7 @@ Este proyecto incluye un Ensamblador  que admite algunas de las capacidades est�
 Cree un archivo .asm y escriba su programa en ensamblador. 
 El programa puede tener un maximo de 64 líneas.
 
-La cpu se encarga de traducir el programa ensamblador a codigo maquina
+El ensamblador se encarga de traducir el programa a codigo maquina que entiende el CPU.
 
 Por ejemplo: si desea escribir un programa que sume 5 + 3, debería ser algo como esto
 
