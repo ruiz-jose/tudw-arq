@@ -137,11 +137,11 @@ Teniendo en cuenta los pasos del ciclo de instrucción visto en la **[Semana 3](
 - Tiempo de CPU para el programa (**Time CPU**) sabiendo que:
 
     Para calcular el Tiempo de CPU tenga en cuenta:
-    * CPU funciana a 20 Hz
+    * CPU funciona a 20 Hz por lo que:
 
         - Duracion del ciclo 1/20 = 0.05 segundos
 
-    * Memoria RAM funciona a 10 Hz
+    * Memoria RAM funciona a 10 Hz por lo que:
 
         - Duracion del ciclo 1/10 = 0.1 segundos
 
