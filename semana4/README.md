@@ -126,15 +126,15 @@ Ejecute:
 
 ## Para_hacer
 
-Teniendo en cuenta los pasos del ciclo de instrucción visto en la **[Semana 3](/semana3/README.md)**
+Teniendo en cuenta los pasos del ciclo de instrucción visto en la **[Semana 3](/semana3/README.md)** calcular:
 
-- Caclular los ciclos de reloj para el programa (**Program-Cycles**)
+- Ciclos de reloj para el programa (**Program-Cycles**)
 
-- Caclular recuento de instruccoines para el programa (**RI**)
+- Recuento de instruccoines para el programa (**RI**)
 
-- Caclular promedio de ciclos por instruccion para el programa (**CPI**)
+- Promedio de ciclos por instruccion para el programa (**CPI**)
 
-- Caclular los tiempo de CPU para el programa (**Time CPU**) sabiendo que:
+- Tiempo de CPU para el programa (**Time CPU**) sabiendo que:
 
     Para calcular el Tiempo de CPU tenga en cuenta:
     * CPU funciana a 20 Hz
