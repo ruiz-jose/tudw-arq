@@ -159,7 +159,7 @@ Teniendo en cuenta los pasos del ciclo de instrucción visto en la **[Semana 3](
 | HLT      | 8 ciclos
 
 
-Por ejemplo los ciclos de reloj para la instruccion LDA x (14 ciclos)
+Por ejemplo los ciclos de reloj para la instruccion LDA x (14 ciclos):
 
 - Etapa captacion:
     * 3 ciclos CPU (captar instruccion) + 4 ciclos de espera de CPU a que la memoria devuelva la instrucción LDA
