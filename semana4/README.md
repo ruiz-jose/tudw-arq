@@ -20,11 +20,12 @@ Objetivo: comprender como funcionamiento de la arquitectura acumulador (programa
 ## Arquitectura_Acumulador 
 
 En base EaterEmulator emulates [Ben Eater's](https://www.youtube.com/channel/UCS0N5baNlQWJCUrhCEo8WlA) trabajaremos con python para aprender la arquitectura acumulador de 8 bits.
-La CPU de 8 bits tiene solo 64 bytes de RAM. Su programa debe caber en 64 bytes y esto incluye cualquier dato que necesite para inicializar el programa.Un bus de direcciones tiene 6 bits = 2**6 = 64 posiciones y un bus de datos de 8 bits = 1 byte
+La CPU procesa datos de 1 byte (8 bits), puede acceder solo 64 bytes de RAM, por lo tanto, el programa debe caber en 64 bytes y esto incluye cualquier variable que utilice.
+La arquitectura del CPU permite gestionar un bus de direcciones de 6 bits = 2**6 = 64 posiciones y cada posicion de memoria contiene un 1 byte. El bus de datos de 8 bits (1 byte).
 
 ## Usando_ensamblador
 
-Este proyecto incluye un Ensamblador  que admite algunas de las capacidades estándar que esperaría encontrar en un ensamblador.
+Este proyecto incluye un Ensamblador que admite algunas de las capacidades estándar que esperaría encontrar en un ensamblador.
 
 Cree un archivo .asm y escriba su programa en ensamblador. 
 El programa puede tener un maximo de 64 líneas.
@@ -124,6 +125,8 @@ Ejecute:
 ```
 
 ## Para_hacer
+
+Teniendo en cuenta los pasos del ciclo de instrucción visto en la **[Semana 3](/semana3/README.md)**
 
 - Caclular los ciclos de reloj para el programa (**Program-Cycles**)
 
