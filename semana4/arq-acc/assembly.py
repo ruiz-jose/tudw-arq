@@ -4,7 +4,7 @@ import re
 
 
 class ASSEMBLY:
-     #instruction set
+     # instruction set
      
     def __init__(self):
         
@@ -20,7 +20,7 @@ class ASSEMBLY:
    
     def assembler(self, filename):
         
-        #open the asm file
+        # open the asm file
         try:
             f = open(filename, "r")
         except:
