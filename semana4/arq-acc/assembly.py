@@ -2,7 +2,6 @@ import sys
 #assembler
 import re
 
-
 class ASSEMBLY:
      #instruction set
      
