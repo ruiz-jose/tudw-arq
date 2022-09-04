@@ -1,4 +1,4 @@
-; simple program to z = x + y
+; simple program to: z = x + y
 start:
     LDA x
     ADD y

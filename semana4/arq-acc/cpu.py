@@ -92,7 +92,7 @@ if __name__ == "__main__":
     try:
         filename = sys.argv[1]
     except:
-        print(" -------------------------------------------")
+        print("-------------------------------------------")
         print("|Usage: python cpu.py  <asm filename>      |")
         print("|Example win: python cpu.py code.asm       |")
         print("|Example linux: python3 cpu.py code.asm    |")
