@@ -5,15 +5,15 @@ Objetivo: comprender como funcionamiento de la arquitectura acumulador (programa
 ## Tabla de contenido
 
 * [Arquitectura Acumulador](#Arquitectura_Acumulador)
-* [Usando ensamblador](#Usando_ensamblador)
-   * [Repertorio de instrucciones](#Repertorio_de_instrucciones)
-      * [Instrucciones implementadas](#Instrucciones_implementadas)
+* [Usando ensamblador](#Usando ensamblador)
+   * [Repertorio de instrucciones](#Repertorio de instrucciones)
+      * [Instrucciones implementadas](#Instrucciones implementadas)
    * [Comentarios](#comentarios)
    * [Etiquetas](#etiquetas)
-   * [Espacio en blanco](#Espacio-en-blanco)
-* [Ejecutar código](#Ejecutar_código)
-* [Para hacer](#Para_hacer)
-    * [Ciclos instrucciones](#Ciclos_instrucciones)
+   * [Espacio en blanco](#Espacio en blanco)
+* [Ejecutar código](#Ejecutar código)
+* [Para hacer](#Para hacer)
+    * [Ciclos instrucciones](#Ciclos instrucciones)
 
 
 
