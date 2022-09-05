@@ -130,7 +130,7 @@ Ejecute:
 
 ## Para_hacer
 
-Teniendo en cuenta los pasos del ciclo de instrucción visto en la **[Semana 3](/semana3/README.md)** calcular:
+Teniendo en cuenta los pasos del ciclo de instrucción visto en la **[Semana 3](/semana3/README.md)** y las medidas de rendimiento **[Semana 2](/semana2/README.md)** vistas en la calcular:
 
 - Ciclos de reloj para el programa (**Program-Cycles**)
 
