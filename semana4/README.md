@@ -4,20 +4,20 @@ Objetivo: comprender como funcionamiento de la arquitectura acumulador (programa
 
 ## Tabla de contenido
 
-* [Arquitectura_Acumulador](#Arquitectura_Acumulador)
-* [Usando_ensamblador](#Usando_ensamblador)
-   * [Repertorio_de_instrucciones](#Repertorio_de_instrucciones)
-      * [Instrucciones_implementadas](#Instrucciones_implementadas)
+* [Arquitectura Acumulador](#Arquitectura_Acumulador)
+* [Usando ensamblador](#Usando_ensamblador)
+   * [Repertorio de instrucciones](#Repertorio_de_instrucciones)
+      * [Instrucciones implementadas](#Instrucciones_implementadas)
    * [Comentarios](#comentarios)
    * [Etiquetas](#etiquetas)
-   * [Espacio_en_blanco](#Espacio-en-blanco)
-* [Ejecutar_código](#Ejecutar_código)
-* [Para_hacer](#Para_hacer)
-    * [Ciclos_instrucciones](#Ciclos_instrucciones)
+   * [Espacio en blanco](#Espacio-en-blanco)
+* [Ejecutar código](#Ejecutar_código)
+* [Para hacer](#Para_hacer)
+    * [Ciclos instrucciones](#Ciclos_instrucciones)
 
 
 
-## Arquitectura_Acumulador 
+## Arquitectura Acumulador 
 
 En base EaterEmulator emulates [Ben Eater's](https://www.youtube.com/channel/UCS0N5baNlQWJCUrhCEo8WlA) trabajaremos con python para aprender la arquitectura acumulador de 8 bits.
 La CPU procesa datos de 1 byte (8 bits), puede acceder solo 64 bytes de RAM, por lo tanto, el programa debe caber en 64 bytes y esto incluye cualquier variable que utilice.
@@ -27,7 +27,7 @@ En la **[Semana 3](/semana3/README.md)** se desarrollo los componentes de la arq
 ![Arquitectura ACC](./img/arquitectura-ACC.png)
 
 
-## Usando_ensamblador
+## Usando ensamblador
 
 Este proyecto incluye un Ensamblador que admite algunas de las capacidades estándar que esperaría encontrar en un ensamblador.
 
@@ -57,7 +57,7 @@ En la `línea 2`, tenemos `STA 6`, esto almacenará el contenido `registro ACC` 
 En la `línea 3`, tenemos `HLT`, esto detiene el programa.
 
 
-### Repertorio_de_instrucciones
+### Repertorio de instrucciones
 
 | OpCode | Mnemonic     | Description
 |--------|--------------|------------
@@ -67,7 +67,7 @@ En la `línea 3`, tenemos `HLT`, esto detiene el programa.
 | 11     | **HLT**      | Detiene la ejecución
 
 
-#### Instrucciones_implementadas
+#### Instrucciones implementadas
 
 - [x] LDA
 - [x] STA
@@ -113,12 +113,12 @@ z:
 En este ejemplo, las etiquetas: 'start', 'x', 'y' y 'z' actúan como punteros a direcciones de memoria. El ensamblador pasará primero por el código para encontrar todas las etiquetas y registrar sus direcciones de memoria. Luego, en la segunda pasada, sustituirá las etiquetas por las direcciones reales. 
 
 
-### Espacio_en_blanco
+### Espacio en blanco
 
 Se requiere al menos un carácter de espacio en blanco entre los mnemotécnicos que requieren argumentos y sus argumentos.
 
 
-## Ejecutar_código
+## Ejecutar código
 
 Se requiere la instalación de la versión `Python 3.x`.
 Clone este repositorio `git clone https://github.com/ruiz-jose/tudw-arq.git` 
@@ -128,7 +128,7 @@ Ejecute:
  python cpu.py <nombre de archivo asm>
 ```
 
-## Para_hacer
+## Para hacer
 
 Teniendo en cuenta los pasos del ciclo de instrucción visto en la **[Semana 3](/semana3/README.md)** calcular:
 
@@ -153,7 +153,7 @@ Teniendo en cuenta los pasos del ciclo de instrucción visto en la **[Semana 3](
 
         - El CPU queda en espera por 4 ciclos por cada operacion de lectura o escritura (0.05 * 4 = 0.02 segundos)
 
-### Ciclos_instrucciones
+### Ciclos instrucciones
 
 | Mnemonic | Ciclos
 |----------|------------
