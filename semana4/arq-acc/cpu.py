@@ -81,7 +81,6 @@ class CPU:
             self.HLT = True
             self.cycles += 1
             print("executing HLT      => stop CPU")
-            print(f"Program-Cycles: {self.cycles}")
         else:
             print(f"Illegal opcode {hex(opcode)}")
 
