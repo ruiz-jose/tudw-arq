@@ -17,7 +17,7 @@ Objetivo: comprender como funcionamiento de la arquitectura acumulador (programa
 
 
 
-## Arquitectura Acumulador 
+## Arquitectura_Acumulador 
 
 En base EaterEmulator emulates [Ben Eater's](https://www.youtube.com/channel/UCS0N5baNlQWJCUrhCEo8WlA) trabajaremos con python para aprender la arquitectura acumulador de 8 bits.
 La CPU procesa datos de 1 byte (8 bits), puede acceder solo 64 bytes de RAM, por lo tanto, el programa debe caber en 64 bytes y esto incluye cualquier variable que utilice.
@@ -27,7 +27,7 @@ En la **[Semana 3](/semana3/README.md)** se desarrollo los componentes de la arq
 ![Arquitectura ACC](./img/arquitectura-ACC.png)
 
 
-## Usando ensamblador
+## Usando_ensamblador
 
 Este proyecto incluye un Ensamblador que admite algunas de las capacidades estándar que esperaría encontrar en un ensamblador.
 
@@ -57,7 +57,7 @@ En la `línea 2`, tenemos `STA 6`, esto almacenará el contenido `registro ACC` 
 En la `línea 3`, tenemos `HLT`, esto detiene el programa.
 
 
-### Repertorio de instrucciones
+### Repertorio_de_instrucciones
 
 | OpCode | Mnemonic     | Description
 |--------|--------------|------------
@@ -67,7 +67,7 @@ En la `línea 3`, tenemos `HLT`, esto detiene el programa.
 | 11     | **HLT**      | Detiene la ejecución
 
 
-#### Instrucciones implementadas
+#### Instrucciones_implementadas
 
 - [x] LDA
 - [x] STA
@@ -113,12 +113,12 @@ z:
 En este ejemplo, las etiquetas: 'start', 'x', 'y' y 'z' actúan como punteros a direcciones de memoria. El ensamblador pasará primero por el código para encontrar todas las etiquetas y registrar sus direcciones de memoria. Luego, en la segunda pasada, sustituirá las etiquetas por las direcciones reales. 
 
 
-### Espacio en blanco
+### Espacio_en_blanco
 
 Se requiere al menos un carácter de espacio en blanco entre los mnemotécnicos que requieren argumentos y sus argumentos.
 
 
-## Ejecutar código
+## Ejecutar_código
 
 Se requiere la instalación de la versión `Python 3.x`.
 Clone este repositorio `git clone https://github.com/ruiz-jose/tudw-arq.git` 
@@ -128,7 +128,7 @@ Ejecute:
  python cpu.py <nombre de archivo asm>
 ```
 
-## Para hacer
+## Para_hacer
 
 Teniendo en cuenta los pasos del ciclo de instrucción visto en la **[Semana 3](/semana3/README.md)** calcular:
 
@@ -153,7 +153,7 @@ Teniendo en cuenta los pasos del ciclo de instrucción visto en la **[Semana 3](
 
         - El CPU queda en espera por 4 ciclos por cada operacion de lectura o escritura (0.05 * 4 = 0.02 segundos)
 
-### Ciclos instrucciones
+### Ciclos_instrucciones
 
 | Mnemonic | Ciclos
 |----------|------------
