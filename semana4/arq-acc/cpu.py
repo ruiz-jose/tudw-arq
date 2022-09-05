@@ -16,17 +16,23 @@ class CPU:
 
         #Flags
         self.HLT = False
+        self.cycles = 0
 
     def loadProgram(self, code):
         self.memory = list(code)  
 
     def fetch(self):
-        #decode instruction from opcode by masking higher 6 bits
+        #fetch instruction
         print(f"------------------memory[{self.PC}]-------------------------")
         self.MAR = self.PC
+        self.cycles += 1
         self.MDR = self.memory[self.MAR]
         self.PC += 1
+        self.cycles += 1       
+         #wait memory
+        self.cycles += 4
         self.IR = self.MDR
+        self.cycles += 1  
         print (f"fetching memory[{self.PC-1}] => IR({self.IR}) ← PC({self.PC-1})")
 
     def execute(self):
@@ -39,24 +45,41 @@ class CPU:
         if(opcode == 0x0):
             #LDA
             self.MAR =  address
+            self.cycles += 1
             self.MDR =  self.memory[self.MAR]
+            self.cycles += 1       
+            #wait memory
+            self.cycles += 4
             self.ACC =  self.MDR
-            print(f"executing LDA {address}    => ACC({self.ACC}) ← memory[{address}]")
+            self.cycles += 1       
+            print(f"executing LDA {self.MAR}    => ACC({self.ACC}) ← memory[{self.MAR}]")
            
         elif(opcode == 0x1):
             #STA
             self.MAR = address
+            self.cycles += 1       
             self.MDR = self.ACC 
+            self.cycles += 1
             self.memory[self.MAR] = self.MDR 
-            print(f"executing STA {address}    => memory[{address}] ← ACC({self.ACC})")
+            self.cycles += 1       
+            #wait memory
+            self.cycles += 4
+            print(f"executing STA {self.MAR}    => memory[{self.MAR}] ← ACC({self.ACC})")
         elif(opcode == 0x2):
             #ADD
-            self.MDR = self.memory[address]
-            print(f"executing ADD {address}    => ACC({self.ACC + self.MDR}) ← ACC({self.ACC}) + MDR({self.MDR})")
-            self.ACC = self.ACC + self.MDR           
+            self.MAR = address
+            self.cycles += 1  
+            self.MAR = self.memory[self.MAR]
+            self.cycles += 1       
+            #wait memory
+            self.cycles += 4
+            print(f"executing ADD {self.MAR}    => ACC({self.ACC + self.MDR}) ← ACC({self.ACC}) + MDR({self.MDR})")
+            self.ACC = self.ACC + self.MDR 
+            self.cycles += 1            
         elif(opcode == 0x3):
             #HLT
             self.HLT = True
+            self.cycles += 1
             print("executing HLT      => stop CPU")
         else:
             print(f"Illegal opcode {hex(opcode)}")
@@ -82,7 +105,7 @@ def main(filename):
             print("HALTING System...")
             break;
     print(" ---------------------------------------------------")
-    print("Program-Cycles: ?")
+    print(f"Program-Cycles: {cpu.cycles}")
     print("RI: ?")
     print("CPI: ?")
     print("Time CPU: ?")
