@@ -1,6 +1,17 @@
 import sys
 from assembly import ASSEMBLY
 
+
+class CLOCK:
+    def __init__(self):
+        self.cycles = 0
+
+    def CountCycles(self):
+        self.cycles += 1
+
+    def WaitCycles4(self):
+        self.cycles += 4
+
 class CPU:
     def __init__(self):
         
@@ -16,7 +27,7 @@ class CPU:
 
         #Flags
         self.HLT = False
-        self.cycles = 0
+        self.clock = CLOCK()
 
     def loadProgram(self, code):
         self.memory = list(code)  
@@ -25,14 +36,14 @@ class CPU:
         #fetch instruction
         print(f"------------------memory[{self.PC}]-------------------------")
         self.MAR = self.PC
-        self.cycles += 1
+        self.clock.CountCycles()
         self.MDR = self.memory[self.MAR]
         self.PC += 1
-        self.cycles += 1       
+        self.clock.CountCycles()       
          #wait memory
-        self.cycles += 4
+        self.clock.WaitCycles4()
         self.IR = self.MDR
-        self.cycles += 1  
+        self.clock.CountCycles() 
         print (f"fetching memory[{self.PC-1}] => IR({self.IR}) ← PC({self.PC-1})")
 
     def execute(self):
@@ -45,41 +56,41 @@ class CPU:
         if(opcode == 0x0):
             #LDA
             self.MAR =  address
-            self.cycles += 1
+            self.clock.CountCycles()
             self.MDR =  self.memory[self.MAR]
-            self.cycles += 1       
+            self.clock.CountCycles()       
             #wait memory
-            self.cycles += 4
+            self.clock.WaitCycles4()
             self.ACC =  self.MDR
-            self.cycles += 1       
+            self.clock.CountCycles()       
             print(f"executing LDA {self.MAR}    => ACC({self.ACC}) ← memory[{self.MAR}]")
            
         elif(opcode == 0x1):
             #STA
             self.MAR = address
-            self.cycles += 1       
+            self.clock.CountCycles()       
             self.MDR = self.ACC 
-            self.cycles += 1
+            self.clock.CountCycles()
             self.memory[self.MAR] = self.MDR 
-            self.cycles += 1       
+            self.clock.CountCycles()       
             #wait memory
-            self.cycles += 4
+            self.clock.WaitCycles4()
             print(f"executing STA {self.MAR}    => memory[{self.MAR}] ← ACC({self.ACC})")
         elif(opcode == 0x2):
             #ADD
             self.MAR = address
-            self.cycles += 1  
+            self.clock.CountCycles() 
             self.MAR = self.memory[self.MAR]
-            self.cycles += 1       
+            self.clock.CountCycles()       
             #wait memory
-            self.cycles += 4
+            self.clock.WaitCycles4()
             print(f"executing ADD {self.MAR}    => ACC({self.ACC + self.MDR}) ← ACC({self.ACC}) + MDR({self.MDR})")
             self.ACC = self.ACC + self.MDR 
-            self.cycles += 1            
+            self.clock.CountCycles()            
         elif(opcode == 0x3):
             #HLT
             self.HLT = True
-            self.cycles += 1
+            self.clock.CountCycles()
             print("executing HLT      => stop CPU")
         else:
             print(f"Illegal opcode {hex(opcode)}")
@@ -105,7 +116,7 @@ def main(filename):
             print("HALTING System...")
             break;
     print(" ---------------------------------------------------")
-    print(f"Program-Cycles: {cpu.cycles}")
+    print(f"Program-Cycles: {cpu.clock.cycles}")
     print("RI: ?")
     print("CPI: ?")
     print("Time CPU: ?")
