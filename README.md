@@ -1,9 +1,7 @@
 # tudw-arq
 Clases de arquitectura de computadoras - Tecnicatura Universitaria en Desarrollo Web - 2022
-<div align="center">
 
-
-## Computer Organization and Architecture
+# Computer Organization and Architecture
 
 - **Computer Organization**
   - [How Computers Work - Aduni](http://aduni.org/courses/hcw/index.php?view=cw)
@@ -50,6 +48,5 @@ Clases de arquitectura de computadoras - Tecnicatura Universitaria en Desarrollo
 
 ------------------------------
 
-### :hammer: **Under Construction** :wrench:
 
 
