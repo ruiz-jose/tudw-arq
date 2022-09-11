@@ -28,16 +28,17 @@ class ASSEMBLY:
         #copy the whole file into a buffer and close the file
         buffer = f.read()
         f.close()
-
+        
         #split the buffer based on new lines, we will have a list of instructions
         tokens = buffer.split("\n")
-
+        
         #output buffer
         output = []
         labels = {}
         re_label = re.compile("^\w*:$")
         re_comment = re.compile("^;.*$")
         pc = 0
+        
 
         for i in range(len(tokens)):
             if re_label.match(tokens[i]):
@@ -46,6 +47,9 @@ class ASSEMBLY:
                 continue
             else:
                 pc = pc + 1
+        
+        # print(labels, pc)    
+        # {'start': 0, 'x': 4, 'y': 5, 'z': 6} 8          
         pc = 0 #set back to zero so we can show line numbers on output.
 
         print("|---Code.asm---|")
@@ -77,5 +81,6 @@ class ASSEMBLY:
                 output.append(hex(0))
         print("|---end---|")    
         print()    
+        print(output)
         self.code = list(output)
 
