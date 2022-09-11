@@ -23,6 +23,12 @@ En base EaterEmulator emulates [Ben Eater's](https://www.youtube.com/channel/UCS
 La CPU procesa datos de 1 byte (8 bits), puede acceder solo 64 bytes de RAM, por lo tanto, el programa debe caber en 64 bytes y esto incluye cualquier variable que utilice.
 La arquitectura del CPU permite gestionar un bus de direcciones de 6 bits = 2**6 = 64 posiciones y cada posicion de memoria contiene un 1 byte. El bus de datos de 8 bits (1 byte).
 
+La implementación del cpu de Ben Eater:
+https://youtube.com/c/BenEater
+
+Hecha en Python se copio descaradamente de este link:
+https://github.com/jaychandra86/EaterEmulator
+
 En la **[Semana 3](/semana3/README.md)** se desarrollo los componentes de la arquitectura acumulador:
 ![Arquitectura ACC](./img/arquitectura-ACC.png)
 
