@@ -133,9 +133,9 @@ def main(filename):
             break;
     print(" ---------------------------------------------------")
     print(f"Program-Cycles: {cpu.clock.cycles}")
-    print(f"     RI:    {cpu.PC}" )
+    print(f"      RI: {cpu.PC}" )
     print(f"     CPI: {cpu.clock.cycles / cpu.PC}" )   
-    print(f"Time CPU: {cpu.clock.cycles * cpu.PC * cpu.clock.cycles / cpu.PC }  ")
+    print(f"Time CPU: {cpu.clock.cycles * cpu.PC * cpu.clock.cycles / cpu.PC}  ")
     print(" -------------------------------------------")
 
 if __name__ == "__main__":
