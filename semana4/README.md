@@ -148,16 +148,6 @@ A partir de la implementacion de la arquitectura acumulador hecha en python que 
 
 - Tiempo de CPU para el programa (**Time CPU**) sabiendo que:
 
-
-### Ciclos_instrucciones
-
-| Mnemonic | Ciclos
-|----------|------------
-| LDA      | 14 ciclos
-| STA      | 14 ciclos
-| ADD      | 14 ciclos
-| HLT      | 8 ciclos
-
 - La Duración del ciclo o Frecuencia (Hz) necesarias para calcular el Tiempo de CPU se debe tener en cuenta los siguientes datos:
     * El CPU funciona a 20 Hz por lo que:
 
@@ -180,3 +170,12 @@ A partir de la implementacion de la arquitectura acumulador hecha en python que 
 
     - Etapa ejecucion:
         * 7 ciclos = 3 ciclos CPU (pasos para ejecutar la instruccion) + 4 ciclos que el CPU espera para que la memoria devuelva el dato x solicitado por la instruccion 
+
+### Ciclos_instrucciones
+
+| Mnemonic | Ciclos
+|----------|------------
+| LDA      | 14 ciclos
+| STA      | 14 ciclos
+| ADD      | 14 ciclos
+| HLT      | 8 ciclos
