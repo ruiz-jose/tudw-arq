@@ -26,9 +26,6 @@ La arquitectura del CPU permite gestionar un bus de direcciones de 6 bits = 2**6
 La implementación del cpu de Ben Eater:
 https://eater.net/8bit/control
 
-Hecha en Python se copio descaradamente de este link:
-https://github.com/jaychandra86/EaterEmulator
-
 En la **[Semana 3](/semana3/README.md)** se desarrollo los componentes de la arquitectura acumulador:
 ![Arquitectura ACC](./img/arquitectura-ACC.png)
 
@@ -141,7 +138,7 @@ Teniendo en cuenta las medidas de rendimiento vistas en la **[Semana 2](/semana2
 ![Cilco instruccion](./img/cicloinstruccion.png)
 
 
-Calcular:
+A partir de la implementacion de la arquitectura acumulador hecha en python que se encuentra en el respositorio **[arq-acc-py](https://github.com/ruiz-jose/arq-acc-py)**, calcular:
 
 - Ciclos de reloj para el programa (**Program-Cycles**)
 
@@ -151,6 +148,17 @@ Calcular:
 
 - Tiempo de CPU para el programa (**Time CPU**) sabiendo que:
 
+
+### Ciclos_instrucciones
+
+| Mnemonic | Ciclos
+|----------|------------
+| LDA      | 14 ciclos
+| STA      | 14 ciclos
+| ADD      | 14 ciclos
+| HLT      | 8 ciclos
+
+- Duración del ciclo o Frecuencia (Hz)
     Para calcular el Tiempo de CPU tenga en cuenta:
     * CPU funciona a 20 Hz por lo que:
 
@@ -164,16 +172,6 @@ Calcular:
 
         - El CPU queda en espera por 4 ciclos por cada operacion de lectura o escritura (0.05 * 4 = 0.02 segundos)
 
-### Ciclos_instrucciones
-
-| Mnemonic | Ciclos
-|----------|------------
-| LDA      | 14 ciclos
-| STA      | 14 ciclos
-| ADD      | 14 ciclos
-| HLT      | 8 ciclos
-
-
 Por ejemplo los ciclos de reloj para la instruccion LDA x (14 ciclos)
 
 - Etapa captacion:
@@ -181,5 +179,4 @@ Por ejemplo los ciclos de reloj para la instruccion LDA x (14 ciclos)
 
 - Etapa ejecucion:
     * 3 ciclos CPU (ejecutar instruccion) + 4 ciclos de espera de CPU a que la memoria devuelva el dato x (LDA x) 
-
 
