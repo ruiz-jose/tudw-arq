@@ -176,8 +176,7 @@ A partir de la implementacion de la arquitectura acumulador hecha en python que 
     Por ejemplo los ciclos de reloj para la instruccion LDA x  son 14 ciclos debido a que:
 
     - La etapa captación de la instrucción lleva:
-        * 7 ciclos = 3 ciclos CPU (pasos para dar la orden a la mamoria RAM de captar instruccion) + 4 ciclos de CPU que espera  que la memoria devuelva la instrucción LDA
+        * 7 ciclos = 3 ciclos CPU (pasos para captar instruccion) + 4 ciclos que el CPU espera para que la memoria devuelva la instrucción LDA
 
     - Etapa ejecucion:
-        * 7 ciclos = 3 ciclos CPU (pasos para dar la orden de ejecutar la instruccion) + 4 ciclos de espera de CPU a que la memoria devuelva el dato x solicitado por la instruccion y que se copie en al registro ACC 
-
+        * 7 ciclos = 3 ciclos CPU (pasos para ejecutar la instruccion) + 4 ciclos que el CPU espera para que la memoria devuelva el dato x solicitado por la instruccion 
