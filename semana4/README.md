@@ -149,19 +149,8 @@ A partir de la implementacion de la arquitectura acumulador hecha en python que 
 - Tiempo de CPU para el programa (**Time CPU**) sabiendo que:
 
 - La Duración del ciclo o Frecuencia (Hz) necesarias para calcular el Tiempo de CPU se debe tener en cuenta los siguientes datos:
-    * El CPU funciona a 20 Hz por lo que:
-
-        - La duracion de un ciclo de CPU es --> 1/Hz = 1/20 = 0.05 segundos 
-
-    * La memoria RAM funciona a 10 Hz por lo que:
-
-        - Como la memoria RAM es más lenta el CPU debe esperar a que la memoria responda.
-        
-        - La duracion del ciclo de la memoria RAM es --> 1/HZ = 1/10 = 0.1 segundos.
-
-        - Cada orden de lectura o escritura (read/write) a memoria RAM tarda 2 ciclos de RAM, entonces una operacion en memoria tarda 0.2 segundos.
-
-        - 0.2 segundos de una operacion de memoria RAM representa 4 ciclos de CPU (0.05 ciclos de CPU * 4 = 0.2 segundos), entonces el CPU espera (wait) por 4 ciclos cada vez que hay una operacion de lectura o escritura en la memoria RAM
+   
+   ![ejercicio](./img/ejercicio.png)
 
     Por ejemplo los ciclos de reloj para la instruccion LDA x  son 14 ciclos debido a que:
 
