@@ -123,7 +123,16 @@ def main(filename):
     
     asm.assembler(filename)
     cpu.loadProgram(asm.code)
+    
+    # Recuento de instrucciones
+    instruction_count = 0
 
+    # Duracion de un ciclo de reloj en segundos
+    clock_cycle_time = 0.05
+    
+    # Hz del CPU
+    Hz = 20
+       
     while not cpu.HLT: 
         
         try:
@@ -133,19 +142,24 @@ def main(filename):
             #stage execution
             cpu.execute()
             
+            instruction_count += 1 
+
         except Exception as e:
             print("HALTING System...")
             break;
 
     '''
-    Solucion propuesta por Christiam         
+    Una solucion posible        
     '''
-
+    cpi = cpu.clock.cycles / instruction_count
     print(" ---------------------------------------------------")
     print(f"Program-Cycles: {cpu.clock.cycles}")
-    print(f"      RI: {cpu.PC}" )
-    print(f"     CPI: {cpu.clock.cycles / cpu.PC}" )   
-    print(f"Time CPU: {cpu.clock.cycles * cpu.PC * cpu.clock.cycles / cpu.PC}  ")
+    print(f"        RI: {cpu.PC}" )
+    print(f"       CPI: {cpi}" )   
+    print(f"Time CPU-Hz: {cpu.clock.cycles / Hz}  ")
+    print(f"Time CPU-Hz-cpi: {cpi * instruction_count / Hz}  ")
+    print(f"Time CPU-Tc: {cpu.clock.cycles * clock_cycle_time}  ")
+    print(f"Time CPU-Tc-cpi: {cpi * instruction_count * clock_cycle_time}  ")
     print(" -------------------------------------------")
 
 if __name__ == "__main__":
