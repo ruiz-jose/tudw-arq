@@ -16,4 +16,5 @@
 ##  **[Semana 4](/semana4/README.md)**
 ##  **[Semana 5](/semana5/README.md)**
 ##  **[Semana 6](/semana6/README.md)**
+##  **[Semana 6](/semana7/README.md)**
 
