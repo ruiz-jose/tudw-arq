@@ -1,9 +1,15 @@
 ##  Semana 7: Interrupciones
 
-### 1. Diferencia rendimiento CPU-RAM
+### 1. Instrucción CALL/RET
 
-### 2. Principio de localidad
+### 2. Arranque del sistema
 
-### 3. Pirámide de jerarquía de memoria
+### 3. Vector de interrupciones
 
-### 4. DRAM
+### 4. Tipos de interrupciones:
+
+  Interrupción Software: Instrucción INT/IRET
+
+  Interrupción Hardware
+
+  Excepción
