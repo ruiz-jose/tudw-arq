@@ -8,8 +8,8 @@
 
 ### 4. Tipos de interrupciones:
 
-  Interrupción Software: Instrucción INT/IRET
+- Interrupción Software: Instrucción INT/IRET
 
-  Interrupción Hardware
+- Interrupción Hardware
 
-  Excepción
+- Excepción
