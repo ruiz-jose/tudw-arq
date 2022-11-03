@@ -8,7 +8,7 @@
 
 ### 2. Paralelismo a nivel de procesos
 
- ![animationthread](./img/animationthread.gif)
+ ![animationthreads](./img/animationthreads.gif)
 
 ### 3. Paralelismo a nivel de datos (SIMD: una instrución multiple datos)
 
