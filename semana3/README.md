@@ -1,7 +1,7 @@
 ##  Semana 3: Diseño de un CPU
 
 ### 1. Ciclo de Instrucción
-     - Etaqa de captación y ejecución 
+     - Etapa de captación y ejecución 
 
 ### 2. Componentes de la computadoras
     - CPU: 
